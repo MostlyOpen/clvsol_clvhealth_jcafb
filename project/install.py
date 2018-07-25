@@ -437,6 +437,9 @@ def install():
     #
     # ################################################################################################################
 
+    group_names = []
+    install_update_module('contacts', update, group_names)
+
     # group_names = []
     # install_update_module('mail', update, group_names)
 
