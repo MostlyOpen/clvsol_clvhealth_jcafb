@@ -437,17 +437,17 @@ def install():
     #
     # ################################################################################################################
 
-    group_names = []
-    install_update_module('mail', update, group_names)
+    # group_names = []
+    # install_update_module('mail', update, group_names)
 
-    group_names = []
-    install_update_module('hr', update, group_names)
+    # group_names = []
+    # install_update_module('hr', update, group_names)
 
-    group_names = []
-    install_update_module('sales_team', update, group_names)
+    # group_names = []
+    # install_update_module('sales_team', update, group_names)
 
-    group_names = []
-    install_update_module('survey', update, group_names)
+    # group_names = []
+    # install_update_module('survey', update, group_names)
 
     # ################################################################################################################
     #
@@ -455,14 +455,14 @@ def install():
     #
     # ################################################################################################################
 
-    group_names = []
-    install_update_module('l10n_br_base', update, group_names)
+    # group_names = []
+    # install_update_module('l10n_br_base', update, group_names)
 
-    group_names = []
-    install_update_module('l10n_br_zip', update, group_names)
+    # group_names = []
+    # install_update_module('l10n_br_zip', update, group_names)
 
-    group_names = []
-    install_update_module('l10n_br_zip_correios', update, group_names)
+    # group_names = []
+    # install_update_module('l10n_br_zip_correios', update, group_names)
 
     # ################################################################################################################
     #
@@ -479,209 +479,209 @@ def install():
     #
     # ################################################################################################################
 
-    group_names = []
-    install_update_module('clv_disable_web_access', update, group_names)
+    # group_names = []
+    # install_update_module('clv_disable_web_access', update, group_names)
 
-    group_names = [
-        'User (Base)',
-        'Super User (Base)',
-        'Annotation User (Base)',
-        'Register User (Base)',
-        'Log User (Base)',
-        'Manager (Base)',
-        'Super Manager (Base)',
-    ]
-    install_update_module('clv_base', update, group_names)
+    # group_names = [
+    #     'User (Base)',
+    #     'Super User (Base)',
+    #     'Annotation User (Base)',
+    #     'Register User (Base)',
+    #     'Log User (Base)',
+    #     'Manager (Base)',
+    #     'Super Manager (Base)',
+    # ]
+    # install_update_module('clv_base', update, group_names)
 
-    group_names = [
-        'User (Off)',
-        'Super User (Off)',
-        'Manager (Off)',
-        'Super Manager (Off)',
-    ]
-    install_update_module('clv_off', update, group_names)
+    # group_names = [
+    #     'User (Off)',
+    #     'Super User (Off)',
+    #     'Manager (Off)',
+    #     'Super Manager (Off)',
+    # ]
+    # install_update_module('clv_off', update, group_names)
 
-    group_names = [
-        'User (File System)',
-        'Manager (File System)',
-        'Super Manager (File System)',
-    ]
-    install_update_module('clv_file_system', update, group_names)
+    # group_names = [
+    #     'User (File System)',
+    #     'Manager (File System)',
+    #     'Super Manager (File System)',
+    # ]
+    # install_update_module('clv_file_system', update, group_names)
 
-    group_names = [
-        'User (Global Tag)',
-        'Manager (Global Tag)',
-        'Super Manager (Global Tag)',
-    ]
-    install_update_module('clv_global_tag', update, group_names)
+    # group_names = [
+    #     'User (Global Tag)',
+    #     'Manager (Global Tag)',
+    #     'Super Manager (Global Tag)',
+    # ]
+    # install_update_module('clv_global_tag', update, group_names)
 
-    group_names = [
-        'User (History Marker)',
-        'Manager (History Marker)',
-        'Super Manager (History Marker)',
-    ]
-    install_update_module('clv_history_marker', update, group_names)
+    # group_names = [
+    #     'User (History Marker)',
+    #     'Manager (History Marker)',
+    #     'Super Manager (History Marker)',
+    # ]
+    # install_update_module('clv_history_marker', update, group_names)
 
-    group_names = [
-        'User (Report)',
-        'Manager (Report)',
-        'Super Manager (Report)',
-    ]
-    install_update_module('clv_report', update, group_names)
+    # group_names = [
+    #     'User (Report)',
+    #     'Manager (Report)',
+    #     'Super Manager (Report)',
+    # ]
+    # install_update_module('clv_report', update, group_names)
 
-    group_names = [
-        'User (Data Export)',
-        'Manager (Data Export)',
-        'Super Manager (Data Export)',
-    ]
-    install_update_module('clv_data_export', update, group_names)
+    # group_names = [
+    #     'User (Data Export)',
+    #     'Manager (Data Export)',
+    #     'Super Manager (Data Export)',
+    # ]
+    # install_update_module('clv_data_export', update, group_names)
 
-    group_names = []
-    install_update_module('clv_employee', update, group_names)
+    # group_names = []
+    # install_update_module('clv_employee', update, group_names)
 
-    group_names = []
-    install_update_module('clv_employee_history', update, group_names)
+    # group_names = []
+    # install_update_module('clv_employee_history', update, group_names)
 
-    group_names = [
-        'User (Employee Management)',
-        'Manager (Employee Management)',
-        'Super Manager (Employee Management)',
-    ]
-    install_update_module('clv_employee_mng', update, group_names)
+    # group_names = [
+    #     'User (Employee Management)',
+    #     'Manager (Employee Management)',
+    #     'Super Manager (Employee Management)',
+    # ]
+    # install_update_module('clv_employee_mng', update, group_names)
 
-    group_names = [
-        'User (Address)',
-        'Manager (Address)',
-        'Super Manager (Address)',
-    ]
-    install_update_module('clv_address', update, group_names)
+    # group_names = [
+    #     'User (Address)',
+    #     'Manager (Address)',
+    #     'Super Manager (Address)',
+    # ]
+    # install_update_module('clv_address', update, group_names)
 
-    group_names = []
-    install_update_module('clv_address_history', update, group_names)
+    # group_names = []
+    # install_update_module('clv_address_history', update, group_names)
 
-    group_names = [
-        'User (Person)',
-        'Manager (Person)',
-        'Super Manager (Person)',
-    ]
-    install_update_module('clv_person', update, group_names)
+    # group_names = [
+    #     'User (Person)',
+    #     'Manager (Person)',
+    #     'Super Manager (Person)',
+    # ]
+    # install_update_module('clv_person', update, group_names)
 
-    group_names = []
-    install_update_module('clv_person_history', update, group_names)
+    # group_names = []
+    # install_update_module('clv_person_history', update, group_names)
 
-    group_names = []
-    install_update_module('clv_person_address_history', update, group_names)
+    # group_names = []
+    # install_update_module('clv_person_address_history', update, group_names)
 
-    group_names = [
-        'User (Person Management)',
-        'Manager (Person Management)',
-        'Super Manager (Person Management)',
-    ]
-    install_update_module('clv_person_mng', update, group_names)
+    # group_names = [
+    #     'User (Person Management)',
+    #     'Manager (Person Management)',
+    #     'Super Manager (Person Management)',
+    # ]
+    # install_update_module('clv_person_mng', update, group_names)
 
-    group_names = [
-        'User (Person Off)',
-        'Manager (Person Off)',
-        'Super Manager (Person Off)',
-    ]
-    install_update_module('clv_person_off', update, group_names)
+    # group_names = [
+    #     'User (Person Off)',
+    #     'Manager (Person Off)',
+    #     'Super Manager (Person Off)',
+    # ]
+    # install_update_module('clv_person_off', update, group_names)
 
-    group_names = [
-        'User (Animal)',
-        'Manager (Animal)',
-        'Super Manager (Animal)',
-    ]
-    install_update_module('clv_animal', update, group_names)
+    # group_names = [
+    #     'User (Animal)',
+    #     'Manager (Animal)',
+    #     'Super Manager (Animal)',
+    # ]
+    # install_update_module('clv_animal', update, group_names)
 
-    group_names = []
-    install_update_module('clv_animal_history', update, group_names)
+    # group_names = []
+    # install_update_module('clv_animal_history', update, group_names)
 
-    group_names = []
-    install_update_module('clv_animal_address_history', update, group_names)
+    # group_names = []
+    # install_update_module('clv_animal_address_history', update, group_names)
 
-    group_names = [
-        'User (Community)',
-        'Manager (Community)',
-        'Super Manager (Community)',
-    ]
-    install_update_module('clv_community', update, group_names)
+    # group_names = [
+    #     'User (Community)',
+    #     'Manager (Community)',
+    #     'Super Manager (Community)',
+    # ]
+    # install_update_module('clv_community', update, group_names)
 
-    group_names = []
-    install_update_module('clv_community_history', update, group_names)
+    # group_names = []
+    # install_update_module('clv_community_history', update, group_names)
 
-    group_names = [
-        'User (Event)',
-        'Manager (Event)',
-        'Super Manager (Event)',
-    ]
-    install_update_module('clv_event', update, group_names)
+    # group_names = [
+    #     'User (Event)',
+    #     'Manager (Event)',
+    #     'Super Manager (Event)',
+    # ]
+    # install_update_module('clv_event', update, group_names)
 
-    group_names = []
-    install_update_module('clv_event_history', update, group_names)
+    # group_names = []
+    # install_update_module('clv_event_history', update, group_names)
 
-    group_names = [
-        'User (Survey)',
-        'Manager (Survey)',
-        'Super Manager (Survey)',
-    ]
-    install_update_module('clv_survey', update, group_names)
+    # group_names = [
+    #     'User (Survey)',
+    #     'Manager (Survey)',
+    #     'Super Manager (Survey)',
+    # ]
+    # install_update_module('clv_survey', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_history', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_history', update, group_names)
 
-    group_names = [
-        'User (Lab Test)',
-        'Manager (Lab Test)',
-        'Super Manager (Lab Test)',
-        'Approver (Lab Test)',
-    ]
-    install_update_module('clv_lab_test', update, group_names)
+    # group_names = [
+    #     'User (Lab Test)',
+    #     'Manager (Lab Test)',
+    #     'Super Manager (Lab Test)',
+    #     'Approver (Lab Test)',
+    # ]
+    # install_update_module('clv_lab_test', update, group_names)
 
-    group_names = []
-    install_update_module('clv_lab_test_history', update, group_names)
+    # group_names = []
+    # install_update_module('clv_lab_test_history', update, group_names)
 
-    group_names = [
-        'User (Lab Test (Off))',
-        'Manager (Lab Test (Off))',
-        'Super Manager (Lab Test (Off))',
-        'Approver (Lab Test (Off))',
-    ]
-    install_update_module('clv_lab_test_off', update, group_names)
+    # group_names = [
+    #     'User (Lab Test (Off))',
+    #     'Manager (Lab Test (Off))',
+    #     'Super Manager (Lab Test (Off))',
+    #     'Approver (Lab Test (Off))',
+    # ]
+    # install_update_module('clv_lab_test_off', update, group_names)
 
-    group_names = [
-        'User (Document)',
-        'Manager (Document)',
-        'Super Manager (Document)',
-        'Approver (Document)',
-    ]
-    install_update_module('clv_document', update, group_names)
+    # group_names = [
+    #     'User (Document)',
+    #     'Manager (Document)',
+    #     'Super Manager (Document)',
+    #     'Approver (Document)',
+    # ]
+    # install_update_module('clv_document', update, group_names)
 
-    group_names = []
-    install_update_module('clv_document_history', update, group_names)
+    # group_names = []
+    # install_update_module('clv_document_history', update, group_names)
 
-    group_names = [
-        'User (Document (Off))',
-        'Manager (Document (Off))',
-        'Super Manager (Document (Off))',
-    ]
-    install_update_module('clv_document_off', update, group_names)
+    # group_names = [
+    #     'User (Document (Off))',
+    #     'Manager (Document (Off))',
+    #     'Super Manager (Document (Off))',
+    # ]
+    # install_update_module('clv_document_off', update, group_names)
 
-    group_names = [
-        'User (Media File)',
-        'Manager (Media File)',
-        'Super Manager (Media File)',
-    ]
-    install_update_module('clv_mfile', update, group_names)
+    # group_names = [
+    #     'User (Media File)',
+    #     'Manager (Media File)',
+    #     'Super Manager (Media File)',
+    # ]
+    # install_update_module('clv_mfile', update, group_names)
 
-    group_names = []
-    install_update_module('clv_mfile_history', update, group_names)
+    # group_names = []
+    # install_update_module('clv_mfile_history', update, group_names)
 
-    group_names = [
-        'User (Summary)',
-        'Manager (Summary)',
-        'Super Manager (Summary)',
-    ]
-    install_update_module('clv_summary', update, group_names)
+    # group_names = [
+    #     'User (Summary)',
+    #     'Manager (Summary)',
+    #     'Super Manager (Summary)',
+    # ]
+    # install_update_module('clv_summary', update, group_names)
 
     # ################################################################################################################
     #
@@ -689,23 +689,23 @@ def install():
     #
     # ################################################################################################################
 
-    group_names = []
-    install_update_module('clv_l10n_br_base', update, group_names)
+    # group_names = []
+    # install_update_module('clv_l10n_br_base', update, group_names)
 
-    group_names = []
-    install_update_module('clv_address_l10n_br', update, group_names)
+    # group_names = []
+    # install_update_module('clv_address_l10n_br', update, group_names)
 
-    group_names = []
-    install_update_module('clv_person_l10n_br', update, group_names)
+    # group_names = []
+    # install_update_module('clv_person_l10n_br', update, group_names)
 
-    group_names = []
-    install_update_module('clv_person_history_l10n_br', update, group_names)
+    # group_names = []
+    # install_update_module('clv_person_history_l10n_br', update, group_names)
 
-    group_names = []
-    install_update_module('clv_person_mng_l10n_br', update, group_names)
+    # group_names = []
+    # install_update_module('clv_person_mng_l10n_br', update, group_names)
 
-    group_names = []
-    install_update_module('clv_person_off_l10n_br', update, group_names)
+    # group_names = []
+    # install_update_module('clv_person_off_l10n_br', update, group_names)
 
     # ################################################################################################################
     #
@@ -713,118 +713,118 @@ def install():
     #
     # ################################################################################################################
 
-    group_names = []
-    install_update_module('clv_base_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_base_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_off_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_off_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_file_system_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_file_system_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_global_tag_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_global_tag_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_history_marker_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_history_marker_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_report_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_report_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_data_export_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_data_export_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_employee_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_employee_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_employee_mng_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_employee_mng_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_address_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_address_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_address_history_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_address_history_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_person_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_person_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_person_mng_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_person_mng_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_person_history_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_person_history_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_person_address_history_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_person_address_history_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_person_off_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_person_off_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_animal_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_animal_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_animal_history_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_animal_history_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_animal_address_history_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_animal_address_history_jcafb', update, group_names)
 
-    group_names = [
-        'User (Animal Management)',
-        'Manager (Animal Management)',
-        'Super Manager (Animal Management)',
-    ]
-    install_update_module('clv_animal_mng', update, group_names)
+    # group_names = [
+    #     'User (Animal Management)',
+    #     'Manager (Animal Management)',
+    #     'Super Manager (Animal Management)',
+    # ]
+    # install_update_module('clv_animal_mng', update, group_names)
 
-    group_names = []
-    install_update_module('clv_community_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_community_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_event_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_event_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_jcafb_2017', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_jcafb_2017', update, group_names)
 
-    group_names = []
-    install_update_module('clv_survey_jcafb_2018', update, group_names)
+    # group_names = []
+    # install_update_module('clv_survey_jcafb_2018', update, group_names)
 
-    group_names = []
-    install_update_module('clv_lab_test_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_lab_test_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_lab_test_off_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_lab_test_off_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_lab_test_jcafb_2017', update, group_names)
+    # group_names = []
+    # install_update_module('clv_lab_test_jcafb_2017', update, group_names)
 
-    group_names = []
-    install_update_module('clv_lab_test_jcafb_2018', update, group_names)
+    # group_names = []
+    # install_update_module('clv_lab_test_jcafb_2018', update, group_names)
 
-    group_names = []
-    install_update_module('clv_document_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_document_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_document_off_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_document_off_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_mfile_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_mfile_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_summary_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_summary_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_default_jcafb_2018', update, group_names)
+    # group_names = []
+    # install_update_module('clv_default_jcafb_2018', update, group_names)
 
-    group_names = [
-        'User (Person Selection)',
-        'Manager (Person Selection)',
-        'Super Manager (Person Selection)',
-    ]
-    install_update_module('clv_person_sel', update, group_names)
+    # group_names = [
+    #     'User (Person Selection)',
+    #     'Manager (Person Selection)',
+    #     'Super Manager (Person Selection)',
+    # ]
+    # install_update_module('clv_person_sel', update, group_names)
 
 
 def secondsToStr(t):
