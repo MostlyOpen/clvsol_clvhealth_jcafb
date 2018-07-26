@@ -716,8 +716,8 @@ def install():
     #
     # ################################################################################################################
 
-    # group_names = []
-    # install_update_module('clv_base_jcafb', update, group_names)
+    group_names = []
+    install_update_module('clv_base_jcafb', update, group_names)
 
     # group_names = []
     # install_update_module('clv_off_jcafb', update, group_names)
