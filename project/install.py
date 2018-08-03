@@ -125,56 +125,6 @@ def get_arguments():
         modules_to_upgrade = []
 
 
-def Demo_User():
-
-    print('Configuring user "Demo"...')
-
-    sock_common = xmlrpclib.ServerProxy(sock_common_url)
-    uid = sock_common.login(dbname, admin_user, admin_user_pw)
-    sock = xmlrpclib.ServerProxy(sock_str)
-
-    args = [('name', '=', CompanyName), ]
-    parent_id = sock.execute(dbname, uid, admin_user_pw, 'res.partner', 'search', args)
-    args = [('name', '=', CompanyName), ]
-    company_id = sock.execute(dbname, uid, admin_user_pw, 'res.company', 'search', args)
-
-    values = {
-        'name': demo_user_name,
-        'customer': False,
-        'employee': False,
-        'is_company': False,
-        'email': demo_user_email,
-        'website': '',
-        'parent_id': parent_id[0],
-        'company_id': company_id[0],
-        'tz': tz,
-        'lang': lang
-    }
-    partner_id = sock.execute(dbname, uid, admin_user_pw, 'res.partner', 'create', values)
-
-    values = {
-        'name': demo_user_name,
-        'partner_id': partner_id,
-        'company_id': company_id[0],
-        'login': demo_user,
-        'password': demo_user_pw,
-        'image': Demo_User_image,
-        'groups_id': [(6, 0, [])],
-    }
-    user_id = sock.execute(dbname, uid, admin_user_pw, 'res.users', 'create', values)
-
-    values = {
-        'groups_id': [(6, 0, [
-            sock.execute(
-                dbname, uid, admin_user_pw,
-                'res.groups', 'search', [('name', '=', 'Employee')])[0],
-        ])],
-    }
-    sock.execute(dbname, uid, admin_user_pw, 'res.users', 'write', user_id, values)
-
-    print('Done.')
-
-
 def Data_Administrator_User():
 
     print('Configuring user "Data Administrator"...')
@@ -285,8 +235,8 @@ def install_():
         install.MyCompany(CompanyName, website, tz, Company_image)
         print('\n--> Administrator()')
         install.Administrator(tz, admin_user_email, Administrator_image)
-    #     print('--> Demo_User()')
-    #     Demo_User()
+        print('\n--> Demo_User()')
+        install.Demo_User(demo_user_name, demo_user_email, CompanyName, tz, demo_user, demo_user_pw, Demo_User_image)
     #     print('--> Data_Administrator_User()')
     #     Data_Administrator_User()
     else:
