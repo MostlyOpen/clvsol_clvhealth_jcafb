@@ -43,10 +43,12 @@ admin_user_email = 'admin@clvsol.com'
 Administrator_image = images.Administrator_image
 Demo_User_image = images.Demo_User_image
 DataAdministrator_image = images.DataAdministrator_image
+
 demo_user_name = 'Demo User'
 demo_user = 'demo'
 demo_user_pw = 'demo'
 demo_user_email = 'demo.user@clvsol.com'
+
 data_admin_user_name = 'Data Administrator'
 data_admin_user = 'data.admin'
 data_admin_user_pw = 'data.admin'
@@ -125,59 +127,6 @@ def get_arguments():
         modules_to_upgrade = []
 
 
-def Data_Administrator_User():
-
-    print('Configuring user "Data Administrator"...')
-
-    sock_common = xmlrpclib.ServerProxy(sock_common_url)
-    uid = sock_common.login(dbname, admin_user, admin_user_pw)
-    sock = xmlrpclib.ServerProxy(sock_str)
-
-    args = [('name', '=', CompanyName), ]
-    parent_id = sock.execute(dbname, uid, admin_user_pw, 'res.partner', 'search', args)
-    args = [('name', '=', CompanyName), ]
-    company_id = sock.execute(dbname, uid, admin_user_pw, 'res.company', 'search', args)
-
-    values = {
-        'name': data_admin_user_name,
-        'customer': False,
-        'employee': False,
-        'is_company': False,
-        'email': data_admin_user_email,
-        'website': '',
-        'parent_id': parent_id[0],
-        'company_id': company_id[0],
-        'tz': tz,
-        'lang': lang
-    }
-    partner_id = sock.execute(dbname, uid, admin_user_pw, 'res.partner', 'create', values)
-
-    values = {
-        'name': data_admin_user_name,
-        'partner_id': partner_id,
-        'company_id': company_id[0],
-        'login': data_admin_user,
-        'password': data_admin_user_pw,
-        'image': DataAdministrator_image,
-        'groups_id': [(6, 0, [])],
-    }
-    user_id = sock.execute(dbname, uid, admin_user_pw, 'res.users', 'create', values)
-
-    values = {
-        'groups_id': [(6, 0, [
-            sock.execute(
-                dbname, uid, admin_user_pw,
-                'res.groups', 'search', [('name', '=', 'Employee')])[0],
-            sock.execute(
-                dbname, uid, admin_user_pw,
-                'res.groups', 'search', [('name', '=', 'Contact Creation')])[0],
-        ])],
-    }
-    sock.execute(dbname, uid, admin_user_pw, 'res.users', 'write', user_id, values)
-
-    print('Done.')
-
-
 def user_groups_set(user_name, group_name_list):
 
     print('Executing user_groups_set...')
@@ -237,8 +186,11 @@ def install_():
         install.Administrator(tz, admin_user_email, Administrator_image)
         print('\n--> Demo_User()')
         install.Demo_User(demo_user_name, demo_user_email, CompanyName, tz, demo_user, demo_user_pw, Demo_User_image)
-    #     print('--> Data_Administrator_User()')
-    #     Data_Administrator_User()
+        print('\n--> Data_Administrator_User()')
+        install.Data_Administrator_User(
+            data_admin_user_name, data_admin_user_email, CompanyName, tz,
+            data_admin_user, data_admin_user_pw, DataAdministrator_image
+        )
     else:
         print('\n--> newDB: ', newDB)
     #     client = erppeek.Client(server,
