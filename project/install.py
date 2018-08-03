@@ -33,7 +33,7 @@ import images
 from odoo_client.cli import *
 from odoo_client.install import *
 
-update = False
+upgrade = False
 CompanyName = 'CLVhealth-JCAFB'
 Slogan = 'Uma vez Jornadeiro, sempre Jornadeiro'
 Company_image = images.Company_image
@@ -65,7 +65,7 @@ admin_user_pw = 'admin'
 data_admin_user_pw = 'data.admin'
 dbname = 'clvhealth_jcafb'
 demo_data = False
-modules_to_update = []
+modules_to_upgrade = []
 
 sock_common_url = 'http://localhost:8069/xmlrpc/common'
 sock_str = 'http://localhost:8069/xmlrpc/object'
@@ -73,28 +73,28 @@ sock_str = 'http://localhost:8069/xmlrpc/object'
 
 def get_arguments():
 
-    global update
+    global upgrade
     global admin_pw
     global admin_user_pw
     global data_admin_user_pw
     global dbname
     global demo_data
-    global modules_to_update
+    global modules_to_upgrade
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-a', '--update_all', action='store_true', help='Update all the modules')
+    parser.add_argument('-a', '--upgrade_all', action='store_true', help='Update all the modules')
     parser.add_argument('--admin_pw', action="store", dest="admin_pw")
     parser.add_argument('--admin_user_pw', action="store", dest="admin_user_pw")
     parser.add_argument('--data_admin_user_pw', action="store", dest="data_admin_user_pw")
     parser.add_argument('--dbname', action="store", dest="dbname")
     parser.add_argument('-d', '--demo_data', action='store_true', help='Install demo data')
-    parser.add_argument('-m', '--modules', nargs='+', help='Modules to update', required=False)
+    parser.add_argument('-m', '--modules', nargs='+', help='Modules to upgrade', required=False)
 
     args = parser.parse_args()
 
     print('\n%s%s\n' % ('--> ', args))
 
-    update = args.update_all
+    upgrade = args.upgrade_all
 
     if args.admin_pw is not None:
         admin_pw = args.admin_pw
@@ -119,9 +119,9 @@ def get_arguments():
     demo_data = args.demo_data
 
     if args.modules is not None:
-        modules_to_update = args.modules
+        modules_to_upgrade = args.modules
     else:
-        modules_to_update = []
+        modules_to_upgrade = []
 
 
 def MyCompany():
@@ -309,37 +309,6 @@ def Data_Administrator_User():
     print('Done.')
 
 
-def install_update(name, update=False):
-
-    print('Processing module "{0}"...'.format(name))
-
-    connection = openerplib.get_connection(hostname=hostname,
-                                           database=dbname,
-                                           login=admin,
-                                           password=admin_user_pw)
-    module_model = connection.get_model('ir.module.module')
-    module_ids = module_model.search([('name', '=', name)])
-    module = module_model.read(module_ids, ['state'])
-    module_state = module[0]['state']
-    print('Module State: {0}.'.format(module_state))
-    if not module_state == 'installed':
-        print('Installing module "{0}"...'.format(name))
-        module_model.button_immediate_install([module_ids[0]])
-        print('Done.'.format(name))
-        return True
-    elif update:
-        print('Upgrading module "{0}"...'.format(name))
-        module_model.button_upgrade([module_ids[0]])
-        upgrade_id = connection.get_model('base.module.upgrade').create({'module_info': module_ids[0]})
-        connection.get_model('base.module.upgrade').upgrade_module(upgrade_id)
-        print('Done.'.format(name))
-        return False
-    else:
-        print('Skipping "{0}"...'.format(name))
-        print('Done.'.format(name))
-        return False
-
-
 def user_groups_set(user_name, group_name_list):
 
     print('Executing user_groups_set...')
@@ -364,39 +333,30 @@ def user_groups_set(user_name, group_name_list):
     print('Done.')
 
 
-def install_update_module(module, update, group_name_list=[]):
+def install_upgrade_module(module, upgrade, group_name_list=[]):
 
-    print('%s%s' % ('--> ', module))
-    if module in modules_to_update:
-        new_module = install_update(module, True)
+    print('\n%s%s' % ('--> ', module))
+    if module in cli.modules_to_upgrade:
+        new_module = install.module_install_upgrade(module, True)
     else:
-        new_module = install_update(module, update)
+        new_module = install.module_install_upgrade(module, upgrade)
 
-    if new_module and group_name_list != []:
+    # if new_module and group_name_list != []:
 
-        user_name = 'Administrator'
-        print('%s%s(%s)' % ('--> ', module, user_name))
-        user_groups_set(user_name, group_name_list)
+    #     user_name = 'Administrator'
+    #     print('%s%s(%s)' % ('--> ', module, user_name))
+    #     user_groups_set(user_name, group_name_list)
 
-        user_name = 'Data Administrator'
-        print('%s%s(%s)' % ('--> ', module, user_name))
-        user_groups_set(user_name, group_name_list)
+    #     user_name = 'Data Administrator'
+    #     print('%s%s(%s)' % ('--> ', module, user_name))
+        # user_groups_set(user_name, group_name_list)
 
     return new_module
 
 
-def install():
+def install_():
 
-    global update
-
-    install = Install(
-        server=cli.server,
-        super_user_pw=cli.super_user_pw,
-        dbname=cli.dbname,
-        demo_data=cli.demo_data,
-        lang=cli.lang,
-        admin_user_pw=cli.admin_user_pw
-    )
+    global upgrade
 
     print('--> create_database()')
     newDB = install.create_database()
@@ -419,7 +379,7 @@ def install():
     #                             verbose=False)
     #     print('--> client: ', client)
     #     proxy = client.model('ir.module.module')
-    #     proxy.update_list()
+    #     proxy.upgrade_list()
 
     # ################################################################################################################
     #
@@ -427,20 +387,20 @@ def install():
     #
     # ################################################################################################################
 
-    # group_names = []
-    # install_update_module('contacts', update, group_names)
+    group_names = []
+    install_upgrade_module('contacts', cli.upgrade_all, group_names)
 
     # group_names = []
-    # install_update_module('mail', update, group_names)
+    # install_upgrade_module('mail', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('hr', update, group_names)
+    # install_upgrade_module('hr', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('sales_team', update, group_names)
+    # install_upgrade_module('sales_team', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('survey', update, group_names)
+    # install_upgrade_module('survey', upgrade, group_names)
 
     # ################################################################################################################
     #
@@ -449,13 +409,13 @@ def install():
     # ################################################################################################################
 
     # group_names = []
-    # install_update_module('l10n_br_base', update, group_names)
+    # install_upgrade_module('l10n_br_base', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('l10n_br_zip', update, group_names)
+    # install_upgrade_module('l10n_br_zip', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('l10n_br_zip_correios', update, group_names)
+    # install_upgrade_module('l10n_br_zip_correios', upgrade, group_names)
 
     # ################################################################################################################
     #
@@ -464,7 +424,7 @@ def install():
     # ################################################################################################################
 
     # group_names = []
-    # install_update_module('mass_editing', update, group_names)
+    # install_upgrade_module('mass_editing', upgrade, group_names)
 
     # ################################################################################################################
     #
@@ -473,7 +433,7 @@ def install():
     # ################################################################################################################
 
     # group_names = []
-    # install_update_module('clv_disable_web_access', update, group_names)
+    # install_upgrade_module('clv_disable_web_access', upgrade, group_names)
 
     # group_names = [
     #     'User (Base)',
@@ -484,7 +444,7 @@ def install():
     #     'Manager (Base)',
     #     'Super Manager (Base)',
     # ]
-    # install_update_module('clv_base', update, group_names)
+    # install_upgrade_module('clv_base', upgrade, group_names)
 
     # group_names = [
     #     'User (Off)',
@@ -492,135 +452,135 @@ def install():
     #     'Manager (Off)',
     #     'Super Manager (Off)',
     # ]
-    # install_update_module('clv_off', update, group_names)
+    # install_upgrade_module('clv_off', upgrade, group_names)
 
     # group_names = [
     #     'User (File System)',
     #     'Manager (File System)',
     #     'Super Manager (File System)',
     # ]
-    # install_update_module('clv_file_system', update, group_names)
+    # install_upgrade_module('clv_file_system', upgrade, group_names)
 
     # group_names = [
     #     'User (Global Tag)',
     #     'Manager (Global Tag)',
     #     'Super Manager (Global Tag)',
     # ]
-    # install_update_module('clv_global_tag', update, group_names)
+    # install_upgrade_module('clv_global_tag', upgrade, group_names)
 
     # group_names = [
     #     'User (History Marker)',
     #     'Manager (History Marker)',
     #     'Super Manager (History Marker)',
     # ]
-    # install_update_module('clv_history_marker', update, group_names)
+    # install_upgrade_module('clv_history_marker', upgrade, group_names)
 
     # group_names = [
     #     'User (Report)',
     #     'Manager (Report)',
     #     'Super Manager (Report)',
     # ]
-    # install_update_module('clv_report', update, group_names)
+    # install_upgrade_module('clv_report', upgrade, group_names)
 
     # group_names = [
     #     'User (Data Export)',
     #     'Manager (Data Export)',
     #     'Super Manager (Data Export)',
     # ]
-    # install_update_module('clv_data_export', update, group_names)
+    # install_upgrade_module('clv_data_export', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_employee', update, group_names)
+    # install_upgrade_module('clv_employee', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_employee_history', update, group_names)
+    # install_upgrade_module('clv_employee_history', upgrade, group_names)
 
     # group_names = [
     #     'User (Employee Management)',
     #     'Manager (Employee Management)',
     #     'Super Manager (Employee Management)',
     # ]
-    # install_update_module('clv_employee_mng', update, group_names)
+    # install_upgrade_module('clv_employee_mng', upgrade, group_names)
 
     # group_names = [
     #     'User (Address)',
     #     'Manager (Address)',
     #     'Super Manager (Address)',
     # ]
-    # install_update_module('clv_address', update, group_names)
+    # install_upgrade_module('clv_address', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_address_history', update, group_names)
+    # install_upgrade_module('clv_address_history', upgrade, group_names)
 
     # group_names = [
     #     'User (Person)',
     #     'Manager (Person)',
     #     'Super Manager (Person)',
     # ]
-    # install_update_module('clv_person', update, group_names)
+    # install_upgrade_module('clv_person', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_person_history', update, group_names)
+    # install_upgrade_module('clv_person_history', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_person_address_history', update, group_names)
+    # install_upgrade_module('clv_person_address_history', upgrade, group_names)
 
     # group_names = [
     #     'User (Person Management)',
     #     'Manager (Person Management)',
     #     'Super Manager (Person Management)',
     # ]
-    # install_update_module('clv_person_mng', update, group_names)
+    # install_upgrade_module('clv_person_mng', upgrade, group_names)
 
     # group_names = [
     #     'User (Person Off)',
     #     'Manager (Person Off)',
     #     'Super Manager (Person Off)',
     # ]
-    # install_update_module('clv_person_off', update, group_names)
+    # install_upgrade_module('clv_person_off', upgrade, group_names)
 
     # group_names = [
     #     'User (Animal)',
     #     'Manager (Animal)',
     #     'Super Manager (Animal)',
     # ]
-    # install_update_module('clv_animal', update, group_names)
+    # install_upgrade_module('clv_animal', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_animal_history', update, group_names)
+    # install_upgrade_module('clv_animal_history', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_animal_address_history', update, group_names)
+    # install_upgrade_module('clv_animal_address_history', upgrade, group_names)
 
     # group_names = [
     #     'User (Community)',
     #     'Manager (Community)',
     #     'Super Manager (Community)',
     # ]
-    # install_update_module('clv_community', update, group_names)
+    # install_upgrade_module('clv_community', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_community_history', update, group_names)
+    # install_upgrade_module('clv_community_history', upgrade, group_names)
 
     # group_names = [
     #     'User (Event)',
     #     'Manager (Event)',
     #     'Super Manager (Event)',
     # ]
-    # install_update_module('clv_event', update, group_names)
+    # install_upgrade_module('clv_event', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_event_history', update, group_names)
+    # install_upgrade_module('clv_event_history', upgrade, group_names)
 
     # group_names = [
     #     'User (Survey)',
     #     'Manager (Survey)',
     #     'Super Manager (Survey)',
     # ]
-    # install_update_module('clv_survey', update, group_names)
+    # install_upgrade_module('clv_survey', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_survey_history', update, group_names)
+    # install_upgrade_module('clv_survey_history', upgrade, group_names)
 
     # group_names = [
     #     'User (Lab Test)',
@@ -628,10 +588,10 @@ def install():
     #     'Super Manager (Lab Test)',
     #     'Approver (Lab Test)',
     # ]
-    # install_update_module('clv_lab_test', update, group_names)
+    # install_upgrade_module('clv_lab_test', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_lab_test_history', update, group_names)
+    # install_upgrade_module('clv_lab_test_history', upgrade, group_names)
 
     # group_names = [
     #     'User (Lab Test (Off))',
@@ -639,7 +599,7 @@ def install():
     #     'Super Manager (Lab Test (Off))',
     #     'Approver (Lab Test (Off))',
     # ]
-    # install_update_module('clv_lab_test_off', update, group_names)
+    # install_upgrade_module('clv_lab_test_off', upgrade, group_names)
 
     # group_names = [
     #     'User (Document)',
@@ -647,34 +607,34 @@ def install():
     #     'Super Manager (Document)',
     #     'Approver (Document)',
     # ]
-    # install_update_module('clv_document', update, group_names)
+    # install_upgrade_module('clv_document', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_document_history', update, group_names)
+    # install_upgrade_module('clv_document_history', upgrade, group_names)
 
     # group_names = [
     #     'User (Document (Off))',
     #     'Manager (Document (Off))',
     #     'Super Manager (Document (Off))',
     # ]
-    # install_update_module('clv_document_off', update, group_names)
+    # install_upgrade_module('clv_document_off', upgrade, group_names)
 
     # group_names = [
     #     'User (Media File)',
     #     'Manager (Media File)',
     #     'Super Manager (Media File)',
     # ]
-    # install_update_module('clv_mfile', update, group_names)
+    # install_upgrade_module('clv_mfile', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_mfile_history', update, group_names)
+    # install_upgrade_module('clv_mfile_history', upgrade, group_names)
 
     # group_names = [
     #     'User (Summary)',
     #     'Manager (Summary)',
     #     'Super Manager (Summary)',
     # ]
-    # install_update_module('clv_summary', update, group_names)
+    # install_upgrade_module('clv_summary', upgrade, group_names)
 
     # ################################################################################################################
     #
@@ -683,22 +643,22 @@ def install():
     # ################################################################################################################
 
     # group_names = []
-    # install_update_module('clv_l10n_br_base', update, group_names)
+    # install_upgrade_module('clv_l10n_br_base', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_address_l10n_br', update, group_names)
+    # install_upgrade_module('clv_address_l10n_br', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_person_l10n_br', update, group_names)
+    # install_upgrade_module('clv_person_l10n_br', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_person_history_l10n_br', update, group_names)
+    # install_upgrade_module('clv_person_history_l10n_br', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_person_mng_l10n_br', update, group_names)
+    # install_upgrade_module('clv_person_mng_l10n_br', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_person_off_l10n_br', update, group_names)
+    # install_upgrade_module('clv_person_off_l10n_br', upgrade, group_names)
 
     # ################################################################################################################
     #
@@ -707,117 +667,117 @@ def install():
     # ################################################################################################################
 
     # group_names = []
-    # install_update_module('clv_base_jcafb', update, group_names)
+    # install_upgrade_module('clv_base_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_off_jcafb', update, group_names)
+    # install_upgrade_module('clv_off_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_file_system_jcafb', update, group_names)
+    # install_upgrade_module('clv_file_system_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_global_tag_jcafb', update, group_names)
+    # install_upgrade_module('clv_global_tag_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_history_marker_jcafb', update, group_names)
+    # install_upgrade_module('clv_history_marker_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_report_jcafb', update, group_names)
+    # install_upgrade_module('clv_report_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_data_export_jcafb', update, group_names)
+    # install_upgrade_module('clv_data_export_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_employee_jcafb', update, group_names)
+    # install_upgrade_module('clv_employee_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_employee_mng_jcafb', update, group_names)
+    # install_upgrade_module('clv_employee_mng_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_address_jcafb', update, group_names)
+    # install_upgrade_module('clv_address_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_address_history_jcafb', update, group_names)
+    # install_upgrade_module('clv_address_history_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_person_jcafb', update, group_names)
+    # install_upgrade_module('clv_person_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_person_mng_jcafb', update, group_names)
+    # install_upgrade_module('clv_person_mng_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_person_history_jcafb', update, group_names)
+    # install_upgrade_module('clv_person_history_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_person_address_history_jcafb', update, group_names)
+    # install_upgrade_module('clv_person_address_history_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_person_off_jcafb', update, group_names)
+    # install_upgrade_module('clv_person_off_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_animal_jcafb', update, group_names)
+    # install_upgrade_module('clv_animal_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_animal_history_jcafb', update, group_names)
+    # install_upgrade_module('clv_animal_history_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_animal_address_history_jcafb', update, group_names)
+    # install_upgrade_module('clv_animal_address_history_jcafb', upgrade, group_names)
 
     # group_names = [
     #     'User (Animal Management)',
     #     'Manager (Animal Management)',
     #     'Super Manager (Animal Management)',
     # ]
-    # install_update_module('clv_animal_mng', update, group_names)
+    # install_upgrade_module('clv_animal_mng', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_community_jcafb', update, group_names)
+    # install_upgrade_module('clv_community_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_event_jcafb', update, group_names)
+    # install_upgrade_module('clv_event_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_survey_jcafb', update, group_names)
+    # install_upgrade_module('clv_survey_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_survey_jcafb_2017', update, group_names)
+    # install_upgrade_module('clv_survey_jcafb_2017', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_survey_jcafb_2018', update, group_names)
+    # install_upgrade_module('clv_survey_jcafb_2018', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_lab_test_jcafb', update, group_names)
+    # install_upgrade_module('clv_lab_test_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_lab_test_off_jcafb', update, group_names)
+    # install_upgrade_module('clv_lab_test_off_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_lab_test_jcafb_2017', update, group_names)
+    # install_upgrade_module('clv_lab_test_jcafb_2017', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_lab_test_jcafb_2018', update, group_names)
+    # install_upgrade_module('clv_lab_test_jcafb_2018', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_document_jcafb', update, group_names)
+    # install_upgrade_module('clv_document_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_document_off_jcafb', update, group_names)
+    # install_upgrade_module('clv_document_off_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_mfile_jcafb', update, group_names)
+    # install_upgrade_module('clv_mfile_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_summary_jcafb', update, group_names)
+    # install_upgrade_module('clv_summary_jcafb', upgrade, group_names)
 
     # group_names = []
-    # install_update_module('clv_default_jcafb_2018', update, group_names)
+    # install_upgrade_module('clv_default_jcafb_2018', upgrade, group_names)
 
     # group_names = [
     #     'User (Person Selection)',
     #     'Manager (Person Selection)',
     #     'Super Manager (Person Selection)',
     # ]
-    # install_update_module('clv_person_sel', update, group_names)
+    # install_upgrade_module('clv_person_sel', upgrade, group_names)
 
 
 if __name__ == '__main__':
@@ -825,15 +785,24 @@ if __name__ == '__main__':
     from time import time
 
     # get_arguments()
-    cli = CLI(demo_data=demo_data, lang=lang)
+    cli = CLI(demo_data=demo_data, lang=lang, tz=tz)
     cli.get_arguments_install()
+
+    install = Install(
+        server=cli.server,
+        super_user_pw=cli.super_user_pw,
+        dbname=cli.dbname,
+        demo_data=cli.demo_data,
+        lang=cli.lang,
+        admin_user_pw=cli.admin_user_pw
+    )
 
     start = time()
 
     print('--> Executing install.py...\n')
 
     print('--> Executing install()...\n')
-    install()
+    install_()
 
     print('\n--> install.py')
     print('--> Execution time:', secondsToStr(time() - start), '\n')
