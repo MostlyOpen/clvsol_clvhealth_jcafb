@@ -124,28 +124,6 @@ def get_arguments():
         modules_to_update = []
 
 
-def create_database():
-
-    connection = openerplib.get_connection(hostname=hostname,
-                                           database=None,
-                                           login=admin,
-                                           password=admin_user_pw)
-    db_service = connection.get_service('db')
-    print('Databases found: {0}'.format(db_service.list()))
-    if not db_service.db_exist(dbname):
-        print('Creating database "{0}"...'.format(dbname))
-        db_service.create_database(admin_pw,
-                                   dbname,
-                                   demo_data,
-                                   lang,
-                                   admin_user_pw)
-        print('Created database "{0}".'.format(dbname))
-        return True
-    else:
-        print('Using existing database "{0}".'.format(dbname))
-        return False
-
-
 def MyCompany():
 
     print('Configuring My Company...')
@@ -411,10 +389,19 @@ def install():
 
     global update
 
+    install = Install(
+        server=cli.server,
+        super_user_pw=cli.super_user_pw,
+        dbname=cli.dbname,
+        demo_data=cli.demo_data,
+        lang=cli.lang,
+        admin_user_pw=cli.admin_user_pw
+    )
+
     print('--> create_database()')
-    # newDB = create_database()
-    # if newDB:
-    #     print('--> newDB: ', newDB)
+    newDB = install.create_database()
+    if newDB:
+        print('\n--> newDB: ', newDB)
     #     print('--> MyCompany()')
     #     MyCompany()
     #     print('--> Administrator()')
@@ -423,8 +410,8 @@ def install():
     #     Demo_User()
     #     print('--> Data_Administrator_User()')
     #     Data_Administrator_User()
-    # else:
-    #     print('--> newDB: ', newDB)
+    else:
+        print('\n--> newDB: ', newDB)
     #     client = erppeek.Client(server,
     #                             db=dbname,
     #                             user=admin_user,
