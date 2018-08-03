@@ -33,11 +33,12 @@ import images
 from odoo_client.cli import *
 from odoo_client.install import *
 
-upgrade = False
+# upgrade = False
 CompanyName = 'CLVhealth-JCAFB'
-Slogan = 'Uma vez Jornadeiro, sempre Jornadeiro'
+# Slogan = u'Uma vez Jornadeiro, sempre Jornadeiro.'
 Company_image = images.Company_image
 website = 'https://github.com/CLVsol'
+
 admin_user_email = 'admin@clvsol.com'
 Administrator_image = images.Administrator_image
 Demo_User_image = images.Demo_User_image
@@ -122,40 +123,6 @@ def get_arguments():
         modules_to_upgrade = args.modules
     else:
         modules_to_upgrade = []
-
-
-def MyCompany():
-
-    print('Configuring My Company...')
-
-    sock_common = xmlrpclib.ServerProxy(sock_common_url)
-    uid = sock_common.login(dbname, admin_user, admin_user_pw)
-    sock = xmlrpclib.ServerProxy(sock_str)
-
-    args = [('name', '=', 'My Company'), ]
-    partner_id = sock.execute(dbname, uid, admin_user_pw, 'res.partner', 'search', args)
-    values = {
-        'name': CompanyName,
-        'email': '',
-        'website': website,
-        'tz': tz,
-        'lang': lang,
-        'image': Company_image,
-    }
-    sock.execute(dbname, uid, admin_user_pw, 'res.partner', 'write', partner_id, values)
-
-    args = [('name', '=', 'My Company'), ]
-    company_id = sock.execute(dbname, uid, admin_user_pw, 'res.company', 'search', args)
-    values = {
-        'name': CompanyName,
-        'email': '',
-        'website': website,
-        'rml_header1': Slogan,
-        'logo': Company_image,
-    }
-    sock.execute(dbname, uid, admin_user_pw, 'res.company', 'write', company_id, values)
-
-    print('Done.')
 
 
 def Administrator():
@@ -362,8 +329,8 @@ def install_():
     newDB = install.create_database()
     if newDB:
         print('\n--> newDB: ', newDB)
-    #     print('--> MyCompany()')
-    #     MyCompany()
+        print('\n--> MyCompany()')
+        install.MyCompany(CompanyName, website, tz, Company_image)
     #     print('--> Administrator()')
     #     Administrator()
     #     print('--> Demo_User()')
