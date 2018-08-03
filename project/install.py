@@ -193,14 +193,15 @@ def install_():
         )
     else:
         print('\n--> newDB: ', newDB)
-    #     client = erppeek.Client(server,
-    #                             db=dbname,
-    #                             user=admin_user,
-    #                             password=admin_user_pw,
-    #                             verbose=False)
-    #     print('--> client: ', client)
-    #     proxy = client.model('ir.module.module')
-    #     proxy.upgrade_list()
+        client = erppeek.Client(
+            server=cli.server,
+            db=cli.dbname,
+            user='admin',
+            password=cli.admin_user_pw
+        )
+        print('\n--> Update Modules List"')
+        IrModuleModule = client.model('ir.module.module')
+        IrModuleModule.update_list()
 
     # ################################################################################################################
     #
