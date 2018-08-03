@@ -35,6 +35,7 @@ nosetests.xml
 .project
 .pydevproject
 
+project/odoo_client
 data/data
 data/odoo_api
 data_export_files
