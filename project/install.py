@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 ###############################################################################
 #
@@ -23,12 +23,15 @@ from __future__ import print_function
 
 import images
 
-import argparse
-import getpass
+# import argparse
+# import getpass
 
-import openerplib
-import erppeek
-import xmlrpclib
+# import openerplib
+# import erppeek
+# import xmlrpclib
+
+from odoo_client.cli import *
+from odoo_client.install import *
 
 update = False
 CompanyName = 'CLVhealth-JCAFB'
@@ -409,27 +412,27 @@ def install():
     global update
 
     print('--> create_database()')
-    newDB = create_database()
-    if newDB:
-        print('--> newDB: ', newDB)
-        print('--> MyCompany()')
-        MyCompany()
-        print('--> Administrator()')
-        Administrator()
-        print('--> Demo_User()')
-        Demo_User()
-        print('--> Data_Administrator_User()')
-        Data_Administrator_User()
-    else:
-        print('--> newDB: ', newDB)
-        client = erppeek.Client(server,
-                                db=dbname,
-                                user=admin_user,
-                                password=admin_user_pw,
-                                verbose=False)
-        print('--> client: ', client)
-        proxy = client.model('ir.module.module')
-        proxy.update_list()
+    # newDB = create_database()
+    # if newDB:
+    #     print('--> newDB: ', newDB)
+    #     print('--> MyCompany()')
+    #     MyCompany()
+    #     print('--> Administrator()')
+    #     Administrator()
+    #     print('--> Demo_User()')
+    #     Demo_User()
+    #     print('--> Data_Administrator_User()')
+    #     Data_Administrator_User()
+    # else:
+    #     print('--> newDB: ', newDB)
+    #     client = erppeek.Client(server,
+    #                             db=dbname,
+    #                             user=admin_user,
+    #                             password=admin_user_pw,
+    #                             verbose=False)
+    #     print('--> client: ', client)
+    #     proxy = client.model('ir.module.module')
+    #     proxy.update_list()
 
     # ################################################################################################################
     #
@@ -437,8 +440,8 @@ def install():
     #
     # ################################################################################################################
 
-    group_names = []
-    install_update_module('contacts', update, group_names)
+    # group_names = []
+    # install_update_module('contacts', update, group_names)
 
     # group_names = []
     # install_update_module('mail', update, group_names)
@@ -485,16 +488,16 @@ def install():
     # group_names = []
     # install_update_module('clv_disable_web_access', update, group_names)
 
-    group_names = [
-        'User (Base)',
-        'Super User (Base)',
-        'Annotation User (Base)',
-        'Register User (Base)',
-        'Log User (Base)',
-        'Manager (Base)',
-        'Super Manager (Base)',
-    ]
-    install_update_module('clv_base', update, group_names)
+    # group_names = [
+    #     'User (Base)',
+    #     'Super User (Base)',
+    #     'Annotation User (Base)',
+    #     'Register User (Base)',
+    #     'Log User (Base)',
+    #     'Manager (Base)',
+    #     'Super Manager (Base)',
+    # ]
+    # install_update_module('clv_base', update, group_names)
 
     # group_names = [
     #     'User (Off)',
@@ -511,12 +514,12 @@ def install():
     # ]
     # install_update_module('clv_file_system', update, group_names)
 
-    group_names = [
-        'User (Global Tag)',
-        'Manager (Global Tag)',
-        'Super Manager (Global Tag)',
-    ]
-    install_update_module('clv_global_tag', update, group_names)
+    # group_names = [
+    #     'User (Global Tag)',
+    #     'Manager (Global Tag)',
+    #     'Super Manager (Global Tag)',
+    # ]
+    # install_update_module('clv_global_tag', update, group_names)
 
     # group_names = [
     #     'User (History Marker)',
@@ -716,8 +719,8 @@ def install():
     #
     # ################################################################################################################
 
-    group_names = []
-    install_update_module('clv_base_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_base_jcafb', update, group_names)
 
     # group_names = []
     # install_update_module('clv_off_jcafb', update, group_names)
@@ -725,8 +728,8 @@ def install():
     # group_names = []
     # install_update_module('clv_file_system_jcafb', update, group_names)
 
-    group_names = []
-    install_update_module('clv_global_tag_jcafb', update, group_names)
+    # group_names = []
+    # install_update_module('clv_global_tag_jcafb', update, group_names)
 
     # group_names = []
     # install_update_module('clv_history_marker_jcafb', update, group_names)
@@ -830,17 +833,13 @@ def install():
     # install_update_module('clv_person_sel', update, group_names)
 
 
-def secondsToStr(t):
-
-    return "%d:%02d:%02d.%03d" % \
-        reduce(lambda ll, b: divmod(ll[0], b) + ll[1:], [(t * 1000,), 1000, 60, 60])
-
-
 if __name__ == '__main__':
 
     from time import time
 
-    get_arguments()
+    # get_arguments()
+    cli = CLI(demo_data=demo_data, lang=lang)
+    cli.get_arguments_install()
 
     start = time()
 
