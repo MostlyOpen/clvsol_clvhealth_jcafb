@@ -125,54 +125,6 @@ def get_arguments():
         modules_to_upgrade = []
 
 
-def Administrator():
-
-    print('Configuring user "Administrator"...')
-
-    sock_common = xmlrpclib.ServerProxy(sock_common_url)
-    uid = sock_common.login(dbname, admin_user, admin_user_pw)
-    sock = xmlrpclib.ServerProxy(sock_str)
-
-    args = [('name', '=', 'Administrator'), ]
-    user_id = sock.execute(dbname, uid, admin_user_pw, 'res.users', 'search', args)
-    values = {
-        'lang': lang,
-        'tz': tz,
-        'email': admin_user_email,
-        'image': Administrator_image,
-    }
-    sock.execute(dbname, uid, admin_user_pw, 'res.users', 'write', user_id, values)
-
-    values = {
-        'groups_id': [(6, 0, [
-            sock.execute(
-                dbname, uid, admin_user_pw,
-                'res.groups', 'search', [('name', '=', 'Access Rights')])[0],
-            sock.execute(
-                dbname, uid, admin_user_pw,
-                'res.groups', 'search', [('name', '=', 'Settings')])[0],
-            sock.execute(
-                dbname, uid, admin_user_pw,
-                'res.groups', 'search', [('name', '=', 'Employee')])[0],
-            # sock.execute(
-            #     dbname, uid, admin_user_pw,
-            #     'res.groups', 'search', [('name', '=', 'Multi Companies')])[0],
-            # sock.execute(
-            #     dbname, uid, admin_user_pw,
-            #     'res.groups', 'search', [('name', '=', 'Multi Currencies')])[0],
-            sock.execute(
-                dbname, uid, admin_user_pw,
-                'res.groups', 'search', [('name', '=', 'Technical Features')])[0],
-            sock.execute(
-                dbname, uid, admin_user_pw,
-                'res.groups', 'search', [('name', '=', 'Contact Creation')])[0],
-        ])],
-    }
-    sock.execute(dbname, uid, admin_user_pw, 'res.users', 'write', user_id, values)
-
-    print('Done.')
-
-
 def Demo_User():
 
     print('Configuring user "Demo"...')
@@ -331,8 +283,8 @@ def install_():
         print('\n--> newDB: ', newDB)
         print('\n--> MyCompany()')
         install.MyCompany(CompanyName, website, tz, Company_image)
-    #     print('--> Administrator()')
-    #     Administrator()
+        print('\n--> Administrator()')
+        install.Administrator(tz, admin_user_email, Administrator_image)
     #     print('--> Demo_User()')
     #     Demo_User()
     #     print('--> Data_Administrator_User()')
