@@ -85,11 +85,11 @@ def install_upgrade_module(module, upgrade, group_name_list=[]):
     if new_module and group_name_list != []:
 
         user_name = 'Administrator'
-        print('\n%s%s(%s) %s' % ('--> ', module, user_name, group_name_list))
+        print('\n%s%s (%s) %s' % ('--> ', module, user_name, group_name_list))
         install.user_groups_set(user_name, group_name_list)
 
         user_name = 'Data Administrator'
-        print('\n%s%s(%s) %s' % ('--> ', module, user_name, group_name_list))
+        print('\n%s%s (%s) %s' % ('--> ', module, user_name, group_name_list))
         install.user_groups_set(user_name, group_name_list)
 
     return new_module
