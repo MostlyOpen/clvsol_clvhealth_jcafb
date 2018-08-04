@@ -74,83 +74,6 @@ sock_common_url = 'http://localhost:8069/xmlrpc/common'
 sock_str = 'http://localhost:8069/xmlrpc/object'
 
 
-def get_arguments():
-
-    global upgrade
-    global admin_pw
-    global admin_user_pw
-    global data_admin_user_pw
-    global dbname
-    global demo_data
-    global modules_to_upgrade
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-a', '--upgrade_all', action='store_true', help='Update all the modules')
-    parser.add_argument('--admin_pw', action="store", dest="admin_pw")
-    parser.add_argument('--admin_user_pw', action="store", dest="admin_user_pw")
-    parser.add_argument('--data_admin_user_pw', action="store", dest="data_admin_user_pw")
-    parser.add_argument('--dbname', action="store", dest="dbname")
-    parser.add_argument('-d', '--demo_data', action='store_true', help='Install demo data')
-    parser.add_argument('-m', '--modules', nargs='+', help='Modules to upgrade', required=False)
-
-    args = parser.parse_args()
-
-    print('\n%s%s\n' % ('--> ', args))
-
-    upgrade = args.upgrade_all
-
-    if args.admin_pw is not None:
-        admin_pw = args.admin_pw
-    elif admin_pw == '*':
-        admin_pw = getpass.getpass('admin_pw: ')
-
-    if args.admin_user_pw is not None:
-        admin_user_pw = args.admin_user_pw
-    elif admin_user_pw == '*':
-        admin_user_pw = getpass.getpass('admin_user_pw: ')
-
-    if args.data_admin_user_pw is not None:
-        data_admin_user_pw = args.data_admin_user_pw
-    elif data_admin_user_pw == '*':
-        data_admin_user_pw = getpass.getpass('data_admin_user_pw: ')
-
-    if args.dbname is not None:
-        dbname = args.dbname
-    elif dbname == '*':
-        dbname = raw_input('dbname: ')
-
-    demo_data = args.demo_data
-
-    if args.modules is not None:
-        modules_to_upgrade = args.modules
-    else:
-        modules_to_upgrade = []
-
-
-def user_groups_set(user_name, group_name_list):
-
-    print('Executing user_groups_set...')
-
-    sock_common = xmlrpclib.ServerProxy(sock_common_url)
-    uid = sock_common.login(dbname, admin_user, admin_user_pw)
-    sock = xmlrpclib.ServerProxy(sock_str)
-
-    args = [('name', '=', user_name), ]
-    user_id = sock.execute(dbname, uid, admin_user_pw, 'res.users', 'search', args)
-
-    for group_name in group_name_list:
-        values = {
-            'groups_id': [(
-                4, sock.execute(dbname, uid, admin_user_pw,
-                                'res.groups', 'search', [('name', '=', group_name)]
-                                )[0]
-            )],
-        }
-        sock.execute(dbname, uid, admin_user_pw, 'res.users', 'write', user_id, values)
-
-    print('Done.')
-
-
 def install_upgrade_module(module, upgrade, group_name_list=[]):
 
     print('\n%s%s' % ('--> ', module))
@@ -159,15 +82,15 @@ def install_upgrade_module(module, upgrade, group_name_list=[]):
     else:
         new_module = install.module_install_upgrade(module, upgrade)
 
-    # if new_module and group_name_list != []:
+    if new_module and group_name_list != []:
 
-    #     user_name = 'Administrator'
-    #     print('%s%s(%s)' % ('--> ', module, user_name))
-    #     user_groups_set(user_name, group_name_list)
+        user_name = 'Administrator'
+        print('\n%s%s(%s) %s' % ('--> ', module, user_name, group_name_list))
+        install.user_groups_set(user_name, group_name_list)
 
-    #     user_name = 'Data Administrator'
-    #     print('%s%s(%s)' % ('--> ', module, user_name))
-        # user_groups_set(user_name, group_name_list)
+        user_name = 'Data Administrator'
+        print('\n%s%s(%s) %s' % ('--> ', module, user_name, group_name_list))
+        install.user_groups_set(user_name, group_name_list)
 
     return new_module
 
@@ -257,16 +180,16 @@ def install_():
     # group_names = []
     # install_upgrade_module('clv_disable_web_access', upgrade, group_names)
 
-    # group_names = [
-    #     'User (Base)',
-    #     'Super User (Base)',
-    #     'Annotation User (Base)',
-    #     'Register User (Base)',
-    #     'Log User (Base)',
-    #     'Manager (Base)',
-    #     'Super Manager (Base)',
-    # ]
-    # install_upgrade_module('clv_base', upgrade, group_names)
+    group_names = [
+        'User (Base)',
+        'Super User (Base)',
+        'Annotation User (Base)',
+        'Register User (Base)',
+        'Log User (Base)',
+        'Manager (Base)',
+        'Super Manager (Base)',
+    ]
+    install_upgrade_module('clv_base', cli.upgrade_all, group_names)
 
     # group_names = [
     #     'User (Off)',
