@@ -206,12 +206,12 @@ def install_():
     # ]
     # install_upgrade_module('clv_file_system', upgrade, group_names)
 
-    # group_names = [
-    #     'User (Global Tag)',
-    #     'Manager (Global Tag)',
-    #     'Super Manager (Global Tag)',
-    # ]
-    # install_upgrade_module('clv_global_tag', upgrade, group_names)
+    group_names = [
+        'User (Global Tag)',
+        'Manager (Global Tag)',
+        'Super Manager (Global Tag)',
+    ]
+    install_upgrade_module('clv_global_tag', cli.upgrade_all, group_names)
 
     # group_names = [
     #     'User (History Marker)',
@@ -411,8 +411,8 @@ def install_():
     #
     # ################################################################################################################
 
-    # group_names = []
-    # install_upgrade_module('clv_base_jcafb', upgrade, group_names)
+    group_names = []
+    install_upgrade_module('clv_base_jcafb', cli.upgrade_all, group_names)
 
     # group_names = []
     # install_upgrade_module('clv_off_jcafb', upgrade, group_names)
@@ -420,8 +420,8 @@ def install_():
     # group_names = []
     # install_upgrade_module('clv_file_system_jcafb', upgrade, group_names)
 
-    # group_names = []
-    # install_upgrade_module('clv_global_tag_jcafb', upgrade, group_names)
+    group_names = []
+    install_upgrade_module('clv_global_tag_jcafb', cli.upgrade_all, group_names)
 
     # group_names = []
     # install_upgrade_module('clv_history_marker_jcafb', upgrade, group_names)
@@ -529,7 +529,6 @@ if __name__ == '__main__':
 
     from time import time
 
-    # get_arguments()
     cli = CLI(demo_data=demo_data, lang=lang, tz=tz)
     cli.get_arguments_install()
 
