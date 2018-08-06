@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 ###############################################################################
 #
@@ -22,18 +21,21 @@
 import images
 
 from odoo_client.cli import *
-from odoo_client.install import *
+from odoo_client.db import *
 
 
-class CLVhealth_JCAFB(object):
+class CLVhealthJCAFB(object):
 
     def __init__(
         self,
+
+        server='http://localhost:8069',
 
         CompanyName='CLVhealth-JCAFB',
         Company_image=images.Company_image,
         website='https://github.com/CLVsol',
 
+        admin_user_pw='admin',
         admin_user_email='admin@clvsol.com',
         Administrator_image=images.Administrator_image,
 
@@ -49,16 +51,23 @@ class CLVhealth_JCAFB(object):
         data_admin_user_email='data.admin@clvsol.com',
         DataAdministrator_image=images.DataAdministrator_image,
 
+        dbname='clvhealth_jcafb',
+
         lang='pt_BR',
         tz='America/Sao_Paulo',
 
         demo_data=False,
+        upgrade_all=False,
+        modules_to_upgrade=[],
     ):
+
+        self.server = server
 
         self.CompanyName = CompanyName
         self.Company_image = Company_image
         self.website = website
 
+        self.admin_user_pw = admin_user_pw
         self.admin_user_email = admin_user_email
         self.Administrator_image = Administrator_image
 
@@ -74,28 +83,32 @@ class CLVhealth_JCAFB(object):
         self.data_admin_user_email = data_admin_user_email
         self.DataAdministrator_image = DataAdministrator_image
 
+        self.dbname = dbname
+
         self.lang = lang
         self.tz = tz
 
         self.demo_data = demo_data
+        self.upgrade_all = upgrade_all
+        self.modules_to_upgrade = modules_to_upgrade
 
     def install_upgrade_module(self, module, upgrade, group_name_list=[]):
 
         print('\n%s%s' % ('--> ', module))
-        if module in cli.modules_to_upgrade:
-            new_module = install.module_install_upgrade(module, True)
+        if module in self.modules_to_upgrade:
+            new_module = db.module_install_upgrade(module, True)
         else:
-            new_module = install.module_install_upgrade(module, upgrade)
+            new_module = db.module_install_upgrade(module, upgrade)
 
         if new_module and group_name_list != []:
 
             user_name = 'Administrator'
             print('\n%s%s (%s) %s' % ('--> ', module, user_name, group_name_list))
-            install.user_groups_set(user_name, group_name_list)
+            db.user_groups_setup(user_name, group_name_list)
 
             user_name = 'Data Administrator'
             print('\n%s%s (%s) %s' % ('--> ', module, user_name, group_name_list))
-            install.user_groups_set(user_name, group_name_list)
+            db.user_groups_setup(user_name, group_name_list)
 
         return new_module
 
@@ -104,30 +117,30 @@ class CLVhealth_JCAFB(object):
         global upgrade
 
         print('--> create_database()')
-        newDB = install.create_database()
+        newDB = db.create()
         if newDB:
             print('\n--> newDB: ', newDB)
-            print('\n--> MyCompany()')
-            install.MyCompany(self.CompanyName, self.website, self.Company_image)
+            print('\n--> my_company_setup()')
+            db.my_company_setup(self.CompanyName, self.website, self.Company_image)
             print('\n--> Administrator()')
-            install.Administrator(self.admin_user_email, self.Administrator_image)
-            print('\n--> Demo_User()')
-            install.Demo_User(
+            db.administrator_setup(self.admin_user_email, self.Administrator_image)
+            print('\n--> demo_user_setup()')
+            db.demo_user_setup(
                 self.demo_user_name, self.demo_user_email, self.CompanyName,
                 self.demo_user, self.demo_user_pw, self.Demo_User_image
             )
-            print('\n--> Data_Administrator_User()')
-            install.Data_Administrator_User(
+            print('\n--> data_administrator_user_setup()')
+            db.data_administrator_user_setup(
                 self.data_admin_user_name, self.data_admin_user_email, self.CompanyName,
                 self.data_admin_user, self.data_admin_user_pw, self.DataAdministrator_image
             )
         else:
             print('\n--> newDB: ', newDB)
             client = erppeek.Client(
-                server=cli.server,
-                db=cli.dbname,
+                server=self.server,
+                db=self.dbname,
                 user='admin',
-                password=cli.admin_user_pw
+                password=self.admin_user_pw
             )
             print('\n--> Update Modules List"')
             IrModuleModule = client.model('ir.module.module')
@@ -140,7 +153,7 @@ class CLVhealth_JCAFB(object):
         # ############################################################################################
 
         group_names = []
-        self.install_upgrade_module('contacts', cli.upgrade_all, group_names)
+        self.install_upgrade_module('contacts', False, group_names)
 
         # group_names = []
         # install_upgrade_module('mail', upgrade, group_names)
@@ -196,7 +209,7 @@ class CLVhealth_JCAFB(object):
             'Manager (Base)',
             'Super Manager (Base)',
         ]
-        self.install_upgrade_module('clv_base', cli.upgrade_all, group_names)
+        self.install_upgrade_module('clv_base', self.upgrade_all, group_names)
 
         # group_names = [
         #     'User (Off)',
@@ -218,7 +231,7 @@ class CLVhealth_JCAFB(object):
             'Manager (Global Tag)',
             'Super Manager (Global Tag)',
         ]
-        self.install_upgrade_module('clv_global_tag', cli.upgrade_all, group_names)
+        self.install_upgrade_module('clv_global_tag', self.upgrade_all, group_names)
 
         # group_names = [
         #     'User (History Marker)',
@@ -419,7 +432,7 @@ class CLVhealth_JCAFB(object):
         # ############################################################################################
 
         group_names = []
-        self.install_upgrade_module('clv_base_jcafb', cli.upgrade_all, group_names)
+        self.install_upgrade_module('clv_base_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_off_jcafb', upgrade, group_names)
@@ -428,7 +441,7 @@ class CLVhealth_JCAFB(object):
         # install_upgrade_module('clv_file_system_jcafb', upgrade, group_names)
 
         group_names = []
-        self.install_upgrade_module('clv_global_tag_jcafb', cli.upgrade_all, group_names)
+        self.install_upgrade_module('clv_global_tag_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_history_marker_jcafb', upgrade, group_names)
@@ -536,22 +549,38 @@ if __name__ == '__main__':
 
     from time import time
 
-    clvhealth_jcafb = CLVhealth_JCAFB()
-
     cli = CLI(
-        demo_data=clvhealth_jcafb.demo_data,
-        lang=clvhealth_jcafb.lang,
-        tz=clvhealth_jcafb.tz
+        super_user_pw='*',
+        admin_user_pw='*',
+        data_admin_user_pw='*',
+        dbname='*',
+        demo_data=False,
+        lang='pt_BR',
+        tz='America/Sao_Paulo',
     )
-    cli.get_arguments_install()
+    cli.argparse_db_setup()
 
-    install = Install(
+    clvhealth_jcafb = CLVhealthJCAFB(
+        # super_user_pw=cli.super_user_pw,
+        admin_user_pw=cli.admin_user_pw,
+        demo_user_pw='demo',
+        data_admin_user_pw=cli.data_admin_user_pw,
+        demo_data=cli.demo_data,
+        upgrade_all=cli.upgrade_all,
+        modules_to_upgrade=cli.modules_to_upgrade,
+        lang=cli.lang,
+        tz=cli.tz
+    )
+
+    db = DB(
         server=cli.server,
         super_user_pw=cli.super_user_pw,
+        admin_user_pw=cli.admin_user_pw,
+        data_admin_user_pw=cli.data_admin_user_pw,
         dbname=cli.dbname,
         demo_data=cli.demo_data,
         lang=cli.lang,
-        admin_user_pw=cli.admin_user_pw
+        tz=cli.tz
     )
 
     start = time()
