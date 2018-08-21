@@ -226,6 +226,9 @@ class CLVhealthJCAFB(object):
         # ]
         # install_upgrade_module('clv_file_system', upgrade, group_names)
 
+        group_names = []
+        self.install_upgrade_module('clv_global_log', self.upgrade_all, group_names)
+
         group_names = [
             'User (Global Tag)',
             'Manager (Global Tag)',
