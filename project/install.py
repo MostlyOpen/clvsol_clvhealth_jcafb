@@ -243,6 +243,9 @@ class CLVhealthJCAFB(object):
         # ]
         # install_upgrade_module('clv_history_marker', upgrade, group_names)
 
+        group_names = []
+        self.install_upgrade_module('clv_entity', self.upgrade_all, group_names)
+
         # group_names = [
         #     'User (Report)',
         #     'Manager (Report)',
@@ -279,6 +282,13 @@ class CLVhealthJCAFB(object):
 
         # group_names = []
         # install_upgrade_module('clv_address_history', upgrade, group_names)
+
+        group_names = [
+            'User (Patient)',
+            'Manager (Patient)',
+            'Super Manager (Patient)',
+        ]
+        self.install_upgrade_module('clv_patient', self.upgrade_all, group_names)
 
         # group_names = [
         #     'User (Person)',
@@ -469,6 +479,9 @@ class CLVhealthJCAFB(object):
 
         # group_names = []
         # install_upgrade_module('clv_address_history_jcafb', upgrade, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_patient_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_person_jcafb', upgrade, group_names)
