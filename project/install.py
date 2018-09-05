@@ -290,12 +290,12 @@ class CLVhealthJCAFB(object):
         ]
         self.install_upgrade_module('clv_patient', self.upgrade_all, group_names)
 
-        # group_names = [
-        #     'User (Person)',
-        #     'Manager (Person)',
-        #     'Super Manager (Person)',
-        # ]
-        # install_upgrade_module('clv_person', upgrade, group_names)
+        group_names = [
+            'User (Person)',
+            'Manager (Person)',
+            'Super Manager (Person)',
+        ]
+        self.install_upgrade_module('clv_person', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_person_history', upgrade, group_names)
