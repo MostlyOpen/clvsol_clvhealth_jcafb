@@ -474,8 +474,8 @@ class CLVhealthJCAFB(object):
         # group_names = []
         # install_upgrade_module('clv_employee_mng_jcafb', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('clv_address_jcafb', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_address_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_address_history_jcafb', upgrade, group_names)
