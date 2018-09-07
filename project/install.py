@@ -541,8 +541,8 @@ class CLVhealthJCAFB(object):
         # group_names = []
         # install_upgrade_module('clv_lab_test_jcafb_2018', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('clv_document_jcafb', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_document_off_jcafb', upgrade, group_names)
