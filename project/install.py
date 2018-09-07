@@ -498,8 +498,8 @@ class CLVhealthJCAFB(object):
         # group_names = []
         # install_upgrade_module('clv_person_off_jcafb', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('clv_animal_jcafb', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_animal_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_animal_history_jcafb', upgrade, group_names)
