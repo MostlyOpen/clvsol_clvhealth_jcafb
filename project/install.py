@@ -379,13 +379,13 @@ class CLVhealthJCAFB(object):
         # ]
         # install_upgrade_module('clv_lab_test_off', upgrade, group_names)
 
-        # group_names = [
-        #     'User (Document)',
-        #     'Manager (Document)',
-        #     'Super Manager (Document)',
-        #     'Approver (Document)',
-        # ]
-        # install_upgrade_module('clv_document', upgrade, group_names)
+        group_names = [
+            'User (Document)',
+            'Manager (Document)',
+            'Super Manager (Document)',
+            'Approver (Document)',
+        ]
+        self.install_upgrade_module('clv_document', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_document_history', upgrade, group_names)
