@@ -273,12 +273,12 @@ class CLVhealthJCAFB(object):
         # ]
         # install_upgrade_module('clv_employee_mng', upgrade, group_names)
 
-        # group_names = [
-        #     'User (Address)',
-        #     'Manager (Address)',
-        #     'Super Manager (Address)',
-        # ]
-        # install_upgrade_module('clv_address', upgrade, group_names)
+        group_names = [
+            'User (Address)',
+            'Manager (Address)',
+            'Super Manager (Address)',
+        ]
+        self.install_upgrade_module('clv_address', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_address_history', upgrade, group_names)
