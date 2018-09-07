@@ -317,12 +317,12 @@ class CLVhealthJCAFB(object):
         # ]
         # install_upgrade_module('clv_person_off', upgrade, group_names)
 
-        # group_names = [
-        #     'User (Animal)',
-        #     'Manager (Animal)',
-        #     'Super Manager (Animal)',
-        # ]
-        # install_upgrade_module('clv_animal', upgrade, group_names)
+        group_names = [
+            'User (Animal)',
+            'Manager (Animal)',
+            'Super Manager (Animal)',
+        ]
+        self.install_upgrade_module('clv_animal', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_animal_history', upgrade, group_names)
