@@ -273,12 +273,12 @@ class CLVhealthJCAFB(object):
         # ]
         # install_upgrade_module('clv_employee_mng', upgrade, group_names)
 
-        # group_names = [
-        #     'User (Address)',
-        #     'Manager (Address)',
-        #     'Super Manager (Address)',
-        # ]
-        # install_upgrade_module('clv_address', upgrade, group_names)
+        group_names = [
+            'User (Address)',
+            'Manager (Address)',
+            'Super Manager (Address)',
+        ]
+        self.install_upgrade_module('clv_address', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_address_history', upgrade, group_names)
@@ -290,12 +290,12 @@ class CLVhealthJCAFB(object):
         ]
         self.install_upgrade_module('clv_patient', self.upgrade_all, group_names)
 
-        # group_names = [
-        #     'User (Person)',
-        #     'Manager (Person)',
-        #     'Super Manager (Person)',
-        # ]
-        # install_upgrade_module('clv_person', upgrade, group_names)
+        group_names = [
+            'User (Person)',
+            'Manager (Person)',
+            'Super Manager (Person)',
+        ]
+        self.install_upgrade_module('clv_person', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_person_history', upgrade, group_names)
@@ -317,12 +317,12 @@ class CLVhealthJCAFB(object):
         # ]
         # install_upgrade_module('clv_person_off', upgrade, group_names)
 
-        # group_names = [
-        #     'User (Animal)',
-        #     'Manager (Animal)',
-        #     'Super Manager (Animal)',
-        # ]
-        # install_upgrade_module('clv_animal', upgrade, group_names)
+        group_names = [
+            'User (Animal)',
+            'Manager (Animal)',
+            'Super Manager (Animal)',
+        ]
+        self.install_upgrade_module('clv_animal', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_animal_history', upgrade, group_names)
@@ -379,13 +379,13 @@ class CLVhealthJCAFB(object):
         # ]
         # install_upgrade_module('clv_lab_test_off', upgrade, group_names)
 
-        # group_names = [
-        #     'User (Document)',
-        #     'Manager (Document)',
-        #     'Super Manager (Document)',
-        #     'Approver (Document)',
-        # ]
-        # install_upgrade_module('clv_document', upgrade, group_names)
+        group_names = [
+            'User (Document)',
+            'Manager (Document)',
+            'Super Manager (Document)',
+            'Approver (Document)',
+        ]
+        self.install_upgrade_module('clv_document', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_document_history', upgrade, group_names)
@@ -474,8 +474,8 @@ class CLVhealthJCAFB(object):
         # group_names = []
         # install_upgrade_module('clv_employee_mng_jcafb', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('clv_address_jcafb', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_address_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_address_history_jcafb', upgrade, group_names)
@@ -483,8 +483,8 @@ class CLVhealthJCAFB(object):
         group_names = []
         self.install_upgrade_module('clv_patient_jcafb', self.upgrade_all, group_names)
 
-        # group_names = []
-        # install_upgrade_module('clv_person_jcafb', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_person_mng_jcafb', upgrade, group_names)
@@ -498,8 +498,8 @@ class CLVhealthJCAFB(object):
         # group_names = []
         # install_upgrade_module('clv_person_off_jcafb', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('clv_animal_jcafb', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_animal_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_animal_history_jcafb', upgrade, group_names)
@@ -541,8 +541,8 @@ class CLVhealthJCAFB(object):
         # group_names = []
         # install_upgrade_module('clv_lab_test_jcafb_2018', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('clv_document_jcafb', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_document_off_jcafb', upgrade, group_names)
