@@ -239,12 +239,12 @@ class CLVhealthJCAFB(object):
         ]
         self.install_upgrade_module('clv_global_tag', self.upgrade_all, group_names)
 
-        # group_names = [
-        #     'User (History Marker)',
-        #     'Manager (History Marker)',
-        #     'Super Manager (History Marker)',
-        # ]
-        # install_upgrade_module('clv_history_marker', upgrade, group_names)
+        group_names = [
+            'User (Phase)',
+            'Manager (Phase)',
+            'Super Manager (Phase)',
+        ]
+        self.install_upgrade_module('clv_phase', self.upgrade_all, group_names)
 
         group_names = []
         self.install_upgrade_module('clv_entity', self.upgrade_all, group_names)
@@ -462,8 +462,8 @@ class CLVhealthJCAFB(object):
         group_names = []
         self.install_upgrade_module('clv_global_tag_jcafb', self.upgrade_all, group_names)
 
-        # group_names = []
-        # install_upgrade_module('clv_history_marker_jcafb', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_phase_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_report_jcafb', upgrade, group_names)
