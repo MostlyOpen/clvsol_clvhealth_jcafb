@@ -263,8 +263,8 @@ class CLVhealthJCAFB(object):
         # ]
         # install_upgrade_module('clv_data_export', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('clv_employee', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_employee_history', upgrade, group_names)
