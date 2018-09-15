@@ -158,8 +158,8 @@ class CLVhealthJCAFB(object):
         # group_names = []
         # install_upgrade_module('mail', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('hr', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('hr', False, group_names)
 
         # group_names = []
         # install_upgrade_module('sales_team', upgrade, group_names)
