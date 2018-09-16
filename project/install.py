@@ -158,8 +158,8 @@ class CLVhealthJCAFB(object):
         # group_names = []
         # install_upgrade_module('mail', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('hr', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('hr', False, group_names)
 
         # group_names = []
         # install_upgrade_module('sales_team', upgrade, group_names)
@@ -263,8 +263,8 @@ class CLVhealthJCAFB(object):
         # ]
         # install_upgrade_module('clv_data_export', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('clv_employee', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_employee_history', upgrade, group_names)
@@ -343,12 +343,12 @@ class CLVhealthJCAFB(object):
         # group_names = []
         # install_upgrade_module('clv_community_history', upgrade, group_names)
 
-        # group_names = [
-        #     'User (Event)',
-        #     'Manager (Event)',
-        #     'Super Manager (Event)',
-        # ]
-        # install_upgrade_module('clv_event', upgrade, group_names)
+        group_names = [
+            'User (Event)',
+            'Manager (Event)',
+            'Super Manager (Event)',
+        ]
+        self.install_upgrade_module('clv_event', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_event_history', upgrade, group_names)
@@ -520,8 +520,8 @@ class CLVhealthJCAFB(object):
         # group_names = []
         # install_upgrade_module('clv_community_jcafb', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('clv_event_jcafb', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_event_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_survey_jcafb', upgrade, group_names)
