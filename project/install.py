@@ -222,6 +222,11 @@ class CLVhealthJCAFB(object):
         group_names = []
         self.install_upgrade_module('clv_mass_editing', self.upgrade_all, group_names)
 
+        group_names = [
+            'Download files of directory',
+        ]
+        self.install_upgrade_module('clv_base_directory_file_download', self.upgrade_all, group_names)
+
         # group_names = [
         #     'User (File System)',
         #     'Manager (File System)',
