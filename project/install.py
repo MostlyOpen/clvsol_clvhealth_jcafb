@@ -227,12 +227,12 @@ class CLVhealthJCAFB(object):
         ]
         self.install_upgrade_module('clv_base_directory_file_download', self.upgrade_all, group_names)
 
-        # group_names = [
-        #     'User (File System)',
-        #     'Manager (File System)',
-        #     'Super Manager (File System)',
-        # ]
-        # install_upgrade_module('clv_file_system', upgrade, group_names)
+        group_names = [
+            'User (File System)',
+            'Manager (File System)',
+            'Super Manager (File System)',
+        ]
+        self.install_upgrade_module('clv_file_system', self.upgrade_all, group_names)
 
         group_names = []
         self.install_upgrade_module('clv_global_log', self.upgrade_all, group_names)
