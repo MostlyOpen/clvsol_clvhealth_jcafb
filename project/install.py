@@ -256,12 +256,12 @@ class CLVhealthJCAFB(object):
         # ]
         # install_upgrade_module('clv_report', upgrade, group_names)
 
-        # group_names = [
-        #     'User (Data Export)',
-        #     'Manager (Data Export)',
-        #     'Super Manager (Data Export)',
-        # ]
-        # install_upgrade_module('clv_data_export', upgrade, group_names)
+        group_names = [
+            'User (Export)',
+            'Manager (Export)',
+            'Super Manager (Export)',
+        ]
+        self.install_upgrade_module('clv_export', self.upgrade_all, group_names)
 
         group_names = []
         self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
