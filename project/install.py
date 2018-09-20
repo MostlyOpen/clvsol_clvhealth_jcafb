@@ -468,8 +468,8 @@ class CLVhealthJCAFB(object):
         # group_names = []
         # install_upgrade_module('clv_report_jcafb', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('clv_data_export_jcafb', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_export_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_employee_jcafb', upgrade, group_names)
