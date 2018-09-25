@@ -501,8 +501,8 @@ class CLVhealthJCAFB(object):
         # ]
         # install_upgrade_module('clv_animal_mng', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('clv_community_jcafb', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_community_jcafb', self.upgrade_all, group_names)
 
         group_names = []
         self.install_upgrade_module('clv_event_jcafb', self.upgrade_all, group_names)
