@@ -460,6 +460,9 @@ class CLVhealthJCAFB(object):
         # install_upgrade_module('clv_report_jcafb', upgrade, group_names)
 
         group_names = []
+        self.install_upgrade_module('clv_external_sync_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
         self.install_upgrade_module('clv_export_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
