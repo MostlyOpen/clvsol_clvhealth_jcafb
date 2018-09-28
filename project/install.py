@@ -241,6 +241,13 @@ class CLVhealthJCAFB(object):
         # install_upgrade_module('clv_report', upgrade, group_names)
 
         group_names = [
+            'User (External Sync)',
+            'Manager (External Sync)',
+            'Super Manager (External Sync)',
+        ]
+        self.install_upgrade_module('clv_external_sync', self.upgrade_all, group_names)
+
+        group_names = [
             'User (Export)',
             'Manager (Export)',
             'Super Manager (Export)',
