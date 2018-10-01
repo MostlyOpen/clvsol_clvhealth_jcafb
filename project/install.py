@@ -384,9 +384,6 @@ class CLVhealthJCAFB(object):
         group_names = []
         self.install_upgrade_module('clv_document_history', self.upgrade_all, group_names)
 
-        group_names = []
-        self.install_upgrade_module('clv_document_sync', self.upgrade_all, group_names)
-
         # group_names = [
         #     'User (Document (Off))',
         #     'Manager (Document (Off))',
@@ -543,6 +540,9 @@ class CLVhealthJCAFB(object):
 
         group_names = []
         self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_document_off_jcafb', upgrade, group_names)
