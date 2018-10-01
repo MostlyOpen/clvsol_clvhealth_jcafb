@@ -241,6 +241,13 @@ class CLVhealthJCAFB(object):
         # install_upgrade_module('clv_report', upgrade, group_names)
 
         group_names = [
+            'User (External Sync)',
+            'Manager (External Sync)',
+            'Super Manager (External Sync)',
+        ]
+        self.install_upgrade_module('clv_external_sync', self.upgrade_all, group_names)
+
+        group_names = [
             'User (Export)',
             'Manager (Export)',
             'Super Manager (Export)',
@@ -453,6 +460,9 @@ class CLVhealthJCAFB(object):
         # install_upgrade_module('clv_report_jcafb', upgrade, group_names)
 
         group_names = []
+        self.install_upgrade_module('clv_external_sync_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
         self.install_upgrade_module('clv_export_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
@@ -472,6 +482,9 @@ class CLVhealthJCAFB(object):
 
         group_names = []
         self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_person_sync_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_person_mng_jcafb', upgrade, group_names)
@@ -530,6 +543,9 @@ class CLVhealthJCAFB(object):
 
         group_names = []
         self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_document_off_jcafb', upgrade, group_names)
