@@ -207,6 +207,13 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_mass_editing', self.upgrade_all, group_names)
 
         group_names = [
+            'User (External Sync)',
+            'Manager (External Sync)',
+            'Super Manager (External Sync)',
+        ]
+        self.install_upgrade_module('clv_external_sync', self.upgrade_all, group_names)
+
+        group_names = [
             'User (File System)',
             'Manager (File System)',
             'Super Manager (File System)',
@@ -239,13 +246,6 @@ class CLVhealthJCAFB(object):
         #     'Super Manager (Report)',
         # ]
         # install_upgrade_module('clv_report', upgrade, group_names)
-
-        group_names = [
-            'User (External Sync)',
-            'Manager (External Sync)',
-            'Super Manager (External Sync)',
-        ]
-        self.install_upgrade_module('clv_external_sync', self.upgrade_all, group_names)
 
         group_names = [
             'User (Export)',
@@ -445,6 +445,9 @@ class CLVhealthJCAFB(object):
         # install_upgrade_module('clv_off_jcafb', upgrade, group_names)
 
         group_names = []
+        self.install_upgrade_module('clv_external_sync_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
         self.install_upgrade_module('clv_file_system_jcafb', self.upgrade_all, group_names)
 
         group_names = []
@@ -461,9 +464,6 @@ class CLVhealthJCAFB(object):
 
         # group_names = []
         # install_upgrade_module('clv_report_jcafb', upgrade, group_names)
-
-        group_names = []
-        self.install_upgrade_module('clv_external_sync_jcafb', self.upgrade_all, group_names)
 
         group_names = []
         self.install_upgrade_module('clv_export_jcafb', self.upgrade_all, group_names)
