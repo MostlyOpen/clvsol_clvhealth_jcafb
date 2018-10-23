@@ -344,12 +344,12 @@ class CLVhealthJCAFB(object):
         # group_names = []
         # install_upgrade_module('clv_event_history', upgrade, group_names)
 
-        # group_names = [
-        #     'User (Survey)',
-        #     'Manager (Survey)',
-        #     'Super Manager (Survey)',
-        # ]
-        # install_upgrade_module('clv_survey', upgrade, group_names)
+        group_names = [
+            'User (Survey)',
+            'Manager (Survey)',
+            'Super Manager (Survey)',
+        ]
+        self.install_upgrade_module('clv_survey', self.upgrade_all, group_names)
 
         # group_names = []
         # install_upgrade_module('clv_survey_history', upgrade, group_names)
