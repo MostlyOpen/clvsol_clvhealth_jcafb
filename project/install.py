@@ -148,8 +148,8 @@ class CLVhealthJCAFB(object):
         # group_names = []
         # install_upgrade_module('sales_team', upgrade, group_names)
 
-        # group_names = []
-        # install_upgrade_module('survey', upgrade, group_names)
+        group_names = []
+        self.install_upgrade_module('survey', False, group_names)
 
         # ############################################################################################
         #
