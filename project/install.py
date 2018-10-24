@@ -173,6 +173,41 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
+        group_names = [
+            'User (Base)',
+            'Super User (Base)',
+            'Annotation User (Base)',
+            'Register User (Base)',
+            'Log User (Base)',
+            'Manager (Base)',
+            'Super Manager (Base)',
+        ]
+        self.install_upgrade_module('clv_base', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_global_log', self.upgrade_all, group_names)
+
+        group_names = [
+            'User (External Sync)',
+            'Manager (External Sync)',
+            'Super Manager (External Sync)',
+        ]
+        self.install_upgrade_module('clv_external_sync', self.upgrade_all, group_names)
+
+        group_names = [
+            'User (Global Tag)',
+            'Manager (Global Tag)',
+            'Super Manager (Global Tag)',
+        ]
+        self.install_upgrade_module('clv_global_tag', self.upgrade_all, group_names)
+
+        group_names = [
+            'User (Phase)',
+            'Manager (Phase)',
+            'Super Manager (Phase)',
+        ]
+        self.install_upgrade_module('clv_phase', self.upgrade_all, group_names)
+
         # ############################################################################################
         #
         # CLVsol Odoo Addons - Brazilian Localization
@@ -184,6 +219,21 @@ class CLVhealthJCAFB(object):
         # CLVsol Odoo Addons - JCAFB customizations
         #
         # ############################################################################################
+
+        group_names = []
+        self.install_upgrade_module('clv_base_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_global_log_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_external_sync_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_global_tag_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_phase_jcafb', self.upgrade_all, group_names)
 
 
 if __name__ == '__main__':
