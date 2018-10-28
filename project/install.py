@@ -208,6 +208,14 @@ class CLVhealthJCAFB(object):
         ]
         self.install_upgrade_module('clv_phase', self.upgrade_all, group_names)
 
+        group_names = [
+            'User (Document)',
+            'Manager (Document)',
+            'Super Manager (Document)',
+            'Approver (Document)',
+        ]
+        self.install_upgrade_module('clv_document', self.upgrade_all, group_names)
+
         # ############################################################################################
         #
         # CLVsol Odoo Addons - Brazilian Localization
