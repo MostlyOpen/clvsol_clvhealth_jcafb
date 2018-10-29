@@ -209,6 +209,13 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_phase', self.upgrade_all, group_names)
 
         group_names = [
+            'User (Event)',
+            'Manager (Event)',
+            'Super Manager (Event)',
+        ]
+        self.install_upgrade_module('clv_event', self.upgrade_all, group_names)
+
+        group_names = [
             'User (Community)',
             'Manager (Community)',
             'Super Manager (Community)',
