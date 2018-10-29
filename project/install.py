@@ -266,18 +266,18 @@ class CLVhealthJCAFB(object):
         group_names = []
         self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
 
-        # group_names = []
-        # self.install_upgrade_module('clv_entity', self.upgrade_all, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_entity', self.upgrade_all, group_names)
 
-        # group_names = [
-        #     'User (Person)',
-        #     'Manager (Person)',
-        #     'Super Manager (Person)',
-        # ]
-        # self.install_upgrade_module('clv_person', self.upgrade_all, group_names)
+        group_names = [
+            'User (Person)',
+            'Manager (Person)',
+            'Super Manager (Person)',
+        ]
+        self.install_upgrade_module('clv_person', self.upgrade_all, group_names)
 
-        # group_names = []
-        # self.install_upgrade_module('clv_person_history', self.upgrade_all, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_person_history', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -332,6 +332,9 @@ class CLVhealthJCAFB(object):
 
         group_names = []
         self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
 
 
 if __name__ == '__main__':
