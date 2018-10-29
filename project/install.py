@@ -282,6 +282,9 @@ class CLVhealthJCAFB(object):
         group_names = []
         self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
 
+        group_names = []
+        self.install_upgrade_module('clv_lab_test_jcafb', self.upgrade_all, group_names)
+
 
 if __name__ == '__main__':
 
