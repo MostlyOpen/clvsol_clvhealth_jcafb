@@ -219,18 +219,26 @@ class CLVhealthJCAFB(object):
         group_names = []
         self.install_upgrade_module('clv_document_history', self.upgrade_all, group_names)
 
-        group_names = []
-        self.install_upgrade_module('clv_entity', self.upgrade_all, group_names)
-
         group_names = [
-            'User (Person)',
-            'Manager (Person)',
-            'Super Manager (Person)',
+            'User (Lab Test)',
+            'Manager (Lab Test)',
+            'Super Manager (Lab Test)',
+            'Approver (Lab Test)',
         ]
-        self.install_upgrade_module('clv_person', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test', self.upgrade_all, group_names)
 
-        group_names = []
-        self.install_upgrade_module('clv_person_history', self.upgrade_all, group_names)
+        # group_names = []
+        # self.install_upgrade_module('clv_entity', self.upgrade_all, group_names)
+
+        # group_names = [
+        #     'User (Person)',
+        #     'Manager (Person)',
+        #     'Super Manager (Person)',
+        # ]
+        # self.install_upgrade_module('clv_person', self.upgrade_all, group_names)
+
+        # group_names = []
+        # self.install_upgrade_module('clv_person_history', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
