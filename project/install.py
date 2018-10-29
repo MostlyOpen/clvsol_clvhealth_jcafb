@@ -222,6 +222,13 @@ class CLVhealthJCAFB(object):
         group_names = []
         self.install_upgrade_module('clv_entity', self.upgrade_all, group_names)
 
+        group_names = [
+            'User (Person)',
+            'Manager (Person)',
+            'Super Manager (Person)',
+        ]
+        self.install_upgrade_module('clv_person', self.upgrade_all, group_names)
+
         # ############################################################################################
         #
         # CLVsol Odoo Addons - Brazilian Localization
