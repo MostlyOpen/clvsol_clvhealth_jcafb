@@ -348,6 +348,9 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
 
         group_names = []
+        self.install_upgrade_module('clv_address_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
         self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
 
         group_names = []
