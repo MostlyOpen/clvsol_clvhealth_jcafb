@@ -270,6 +270,13 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_entity', self.upgrade_all, group_names)
 
         group_names = [
+            'User (Address)',
+            'Manager (Address)',
+            'Super Manager (Address)',
+        ]
+        self.install_upgrade_module('clv_address', self.upgrade_all, group_names)
+
+        group_names = [
             'User (Person)',
             'Manager (Person)',
             'Super Manager (Person)',
