@@ -185,6 +185,9 @@ class CLVhealthJCAFB(object):
         group_names = []
         self.install_upgrade_module('l10n_br_base', self.upgrade_all, group_names)
 
+        group_names = []
+        self.install_upgrade_module('l10n_br_zip', self.upgrade_all, group_names)
+
         # ############################################################################################
         #
         # CLVsol Odoo Addons
