@@ -351,6 +351,9 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_community_jcafb', self.upgrade_all, group_names)
 
         group_names = []
+        self.install_upgrade_module('clv_survey_sync_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
         self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
 
         group_names = []
