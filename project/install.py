@@ -225,12 +225,12 @@ class CLVhealthJCAFB(object):
         ]
         self.install_upgrade_module('clv_global_tag', self.upgrade_all, group_names)
 
-        # group_names = [
-        #     'User (Phase)',
-        #     'Manager (Phase)',
-        #     'Super Manager (Phase)',
-        # ]
-        # self.install_upgrade_module('clv_phase', self.upgrade_all, group_names)
+        group_names = [
+            'User (Phase)',
+            'Manager (Phase)',
+            'Super Manager (Phase)',
+        ]
+        self.install_upgrade_module('clv_phase', self.upgrade_all, group_names)
 
         # group_names = [
         #     'User (Event)',
@@ -335,11 +335,11 @@ class CLVhealthJCAFB(object):
         group_names = []
         self.install_upgrade_module('clv_global_tag_sync_jcafb', self.upgrade_all, group_names)
 
-        # group_names = []
-        # self.install_upgrade_module('clv_phase_jcafb', self.upgrade_all, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_phase_jcafb', self.upgrade_all, group_names)
 
-        # group_names = []
-        # self.install_upgrade_module('clv_phase_sync_jcafb', self.upgrade_all, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_phase_sync_jcafb', self.upgrade_all, group_names)
 
         # group_names = []
         # self.install_upgrade_module('clv_event_jcafb', self.upgrade_all, group_names)
