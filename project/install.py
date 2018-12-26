@@ -294,6 +294,9 @@ class CLVhealthJCAFB(object):
         ]
         self.install_upgrade_module('clv_address', self.upgrade_all, group_names)
 
+        group_names = []
+        self.install_upgrade_module('clv_address_history', self.upgrade_all, group_names)
+
         group_names = [
             'User (Person)',
             'Manager (Person)',
