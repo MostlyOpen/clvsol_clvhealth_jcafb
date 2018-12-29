@@ -320,6 +320,9 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
+        group_names = []
+        self.install_upgrade_module('clv_entity_l10n_br', self.upgrade_all, group_names)
+
         # ############################################################################################
         #
         # CLVsol Odoo Addons - JCAFB customizations
