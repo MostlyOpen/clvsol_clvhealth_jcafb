@@ -159,10 +159,10 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('contacts', False, group_names)
 
         group_names = []
-        self.install_upgrade_module('hr', False, group_names)
+        self.install_upgrade_module('survey', False, group_names)
 
         group_names = []
-        self.install_upgrade_module('survey', False, group_names)
+        self.install_upgrade_module('hr', False, group_names)
 
         # ############################################################################################
         #
@@ -232,22 +232,6 @@ class CLVhealthJCAFB(object):
         ]
         self.install_upgrade_module('clv_phase', self.upgrade_all, group_names)
 
-        group_names = []
-        self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
-
-        group_names = []
-        self.install_upgrade_module('clv_employee_history', self.upgrade_all, group_names)
-
-        group_names = [
-            'User (Survey)',
-            'Manager (Survey)',
-            'Super Manager (Survey)',
-        ]
-        self.install_upgrade_module('clv_survey', self.upgrade_all, group_names)
-
-        group_names = []
-        self.install_upgrade_module('clv_survey_history', self.upgrade_all, group_names)
-
         group_names = [
             'User (Event)',
             'Manager (Event)',
@@ -284,8 +268,18 @@ class CLVhealthJCAFB(object):
         group_names = []
         self.install_upgrade_module('clv_lab_test_history', self.upgrade_all, group_names)
 
+        group_names = [
+            'User (Survey)',
+            'Manager (Survey)',
+            'Super Manager (Survey)',
+        ]
+        self.install_upgrade_module('clv_survey', self.upgrade_all, group_names)
+
         group_names = []
-        self.install_upgrade_module('clv_entity', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_survey_history', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_partner_entity', self.upgrade_all, group_names)
 
         group_names = [
             'User (Address)',
@@ -307,12 +301,11 @@ class CLVhealthJCAFB(object):
         group_names = []
         self.install_upgrade_module('clv_person_history', self.upgrade_all, group_names)
 
-        # group_names = [
-        #     'User (Animal)',
-        #     'Manager (Animal)',
-        #     'Super Manager (Animal)',
-        # ]
-        # self.install_upgrade_module('clv_animal', self.upgrade_all, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_employee_history', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -321,10 +314,10 @@ class CLVhealthJCAFB(object):
         # ############################################################################################
 
         group_names = []
-        self.install_upgrade_module('clv_entity_l10n_br', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_partner_entity_l10n_br', self.upgrade_all, group_names)
 
-        # group_names = []
-        # self.install_upgrade_module('clv_address_l10n_br', self.upgrade_all, group_names)
+        # # group_names = []
+        # # self.install_upgrade_module('clv_address_l10n_br', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -345,25 +338,10 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_global_tag_jcafb', self.upgrade_all, group_names)
 
         group_names = []
-        self.install_upgrade_module('clv_global_tag_sync_jcafb', self.upgrade_all, group_names)
-
-        group_names = []
         self.install_upgrade_module('clv_phase_jcafb', self.upgrade_all, group_names)
 
         group_names = []
-        self.install_upgrade_module('clv_phase_sync_jcafb', self.upgrade_all, group_names)
-
-        group_names = []
-        self.install_upgrade_module('clv_employee_sync_jcafb', self.upgrade_all, group_names)
-
-        group_names = []
-        self.install_upgrade_module('clv_survey_sync_jcafb', self.upgrade_all, group_names)
-
-        group_names = []
         self.install_upgrade_module('clv_event_jcafb', self.upgrade_all, group_names)
-
-        group_names = []
-        self.install_upgrade_module('clv_event_sync_jcafb', self.upgrade_all, group_names)
 
         group_names = []
         self.install_upgrade_module('clv_community_jcafb', self.upgrade_all, group_names)
@@ -372,31 +350,46 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
 
         group_names = []
-        self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
-
-        group_names = []
         self.install_upgrade_module('clv_lab_test_jcafb', self.upgrade_all, group_names)
-
-        group_names = []
-        self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
 
         group_names = []
         self.install_upgrade_module('clv_address_jcafb', self.upgrade_all, group_names)
 
         group_names = []
-        self.install_upgrade_module('clv_address_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
+
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - JCAFB customizations (External Sync)
+        #
+        # ############################################################################################
 
         group_names = []
-        self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_global_tag_sync_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_phase_sync_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_event_sync_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_survey_sync_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_address_sync_jcafb', self.upgrade_all, group_names)
 
         group_names = []
         self.install_upgrade_module('clv_person_sync_jcafb', self.upgrade_all, group_names)
 
-        # group_names = []
-        # self.install_upgrade_module('clv_animal_jcafb', self.upgrade_all, group_names)
-
-        # group_names = []
-        # self.install_upgrade_module('clv_animal_sync_jcafb', self.upgrade_all, group_names)
+        group_names = []
+        self.install_upgrade_module('clv_employee_sync_jcafb', self.upgrade_all, group_names)
 
 
 if __name__ == '__main__':
