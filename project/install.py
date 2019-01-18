@@ -365,6 +365,9 @@ class CLVhealthJCAFB(object):
         # ############################################################################################
 
         group_names = []
+        self.install_upgrade_module('clv_base_sync_jcafb', self.upgrade_all, group_names)
+
+        group_names = []
         self.install_upgrade_module('clv_global_tag_sync_jcafb', self.upgrade_all, group_names)
 
         group_names = []
