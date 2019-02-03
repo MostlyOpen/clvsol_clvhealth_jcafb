@@ -365,6 +365,9 @@ class CLVhealthJCAFB(object):
         group_names = []
         self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
 
+        group_names = []
+        self.install_upgrade_module('clv_family_jcafb', self.upgrade_all, group_names)
+
         # ############################################################################################
         #
         # CLVsol Odoo Addons - JCAFB customizations (External Sync)
