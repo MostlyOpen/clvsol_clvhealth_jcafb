@@ -292,16 +292,6 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_address_history', self.upgrade_all, group_names)
 
         group_names = [
-            'User (Person)',
-            'Manager (Person)',
-            'Super Manager (Person)',
-        ]
-        self.install_upgrade_module('clv_person', self.upgrade_all, group_names)
-
-        group_names = []
-        self.install_upgrade_module('clv_person_history', self.upgrade_all, group_names)
-
-        group_names = [
             'User (Family)',
             'Manager (Family)',
             'Super Manager (Family)',
@@ -310,6 +300,16 @@ class CLVhealthJCAFB(object):
 
         group_names = []
         self.install_upgrade_module('clv_family_history', self.upgrade_all, group_names)
+
+        group_names = [
+            'User (Person)',
+            'Manager (Person)',
+            'Super Manager (Person)',
+        ]
+        self.install_upgrade_module('clv_person', self.upgrade_all, group_names)
+
+        group_names = []
+        self.install_upgrade_module('clv_person_history', self.upgrade_all, group_names)
 
         group_names = []
         self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
@@ -369,10 +369,10 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_address_jcafb', self.upgrade_all, group_names)
 
         group_names = []
-        self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_family_jcafb', self.upgrade_all, group_names)
 
         group_names = []
-        self.install_upgrade_module('clv_family_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
