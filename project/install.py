@@ -324,6 +324,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_sync_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_person_history_sync_jcafb', self.upgrade_all, group_names)
+
 
 if __name__ == '__main__':
 
