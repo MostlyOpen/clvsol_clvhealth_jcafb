@@ -204,6 +204,8 @@ class CLVhealthJCAFB(object):
         # ]
         self.install_upgrade_module('clv_base', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_off', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_global_log', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_external_sync', self.upgrade_all, group_names)
