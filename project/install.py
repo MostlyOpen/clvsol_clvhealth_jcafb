@@ -204,7 +204,7 @@ class CLVhealthJCAFB(object):
         # ]
         self.install_upgrade_module('clv_base', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_off', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_off', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_global_log', self.upgrade_all, group_names)
 
@@ -252,7 +252,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_history', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_off', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_off', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -268,7 +268,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_l10n_br', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_off_l10n_br', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_off_l10n_br', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -278,7 +278,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_base_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_off_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_off_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_global_log_jcafb', self.upgrade_all, group_names)
 
@@ -310,7 +310,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_history_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_off_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_off_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
