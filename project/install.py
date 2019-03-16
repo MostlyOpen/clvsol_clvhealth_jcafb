@@ -286,6 +286,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_family_l10n_br', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_family_off_l10n_br', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_person_l10n_br', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person_off_l10n_br', self.upgrade_all, group_names)
