@@ -240,6 +240,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_document_history', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_document_export', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_mfile', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_mfile_history', self.upgrade_all, group_names)
