@@ -322,6 +322,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_lab_test_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_lab_test_export_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_address_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_address_history_jcafb', self.upgrade_all, group_names)
