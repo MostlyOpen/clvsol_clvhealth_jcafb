@@ -216,6 +216,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_export', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_global_tag', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_phase', self.upgrade_all, group_names)
@@ -262,8 +264,6 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_person_off', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_export', self.upgrade_all, group_names)
-
         # ############################################################################################
         #
         # CLVsol Odoo Addons - Brazilian Localization
@@ -300,6 +300,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_export_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_global_tag_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_phase_jcafb', self.upgrade_all, group_names)
@@ -327,8 +329,6 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_person_history_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_person_off_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_export_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
