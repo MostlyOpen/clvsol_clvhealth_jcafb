@@ -212,7 +212,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_external_sync', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
+        # self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_global_tag', self.upgrade_all, group_names)
 
@@ -292,7 +292,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_external_sync_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
+        # self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_global_tag_jcafb', self.upgrade_all, group_names)
 
