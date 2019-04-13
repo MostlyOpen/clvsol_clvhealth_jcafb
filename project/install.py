@@ -12,7 +12,7 @@ class CLVhealthJCAFB(object):
 
     def __init__(
         self,
-
+12_verification
         server='http://localhost:8069',
 
         CompanyName='CLVhealth-JCAFB',
@@ -214,7 +214,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_processing', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_global_tag', self.upgrade_all, group_names)
 
@@ -296,7 +296,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_processing_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_global_tag_jcafb', self.upgrade_all, group_names)
 
