@@ -216,6 +216,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_export', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_global_tag', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_phase', self.upgrade_all, group_names)
@@ -238,6 +240,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_document_history', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_document_export', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_mfile', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_mfile_history', self.upgrade_all, group_names)
@@ -245,6 +249,8 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_lab_test', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_lab_test_history', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_lab_test_export', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_partner_entity', self.upgrade_all, group_names)
 
@@ -298,6 +304,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_export_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_global_tag_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_phase_jcafb', self.upgrade_all, group_names)
@@ -308,9 +316,13 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_document_export_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_mfile_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_lab_test_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_lab_test_export_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_address_jcafb', self.upgrade_all, group_names)
 
