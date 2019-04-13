@@ -12,7 +12,7 @@ class CLVhealthJCAFB(object):
 
     def __init__(
         self,
-12_verification
+
         server='http://localhost:8069',
 
         CompanyName='CLVhealth-JCAFB',
