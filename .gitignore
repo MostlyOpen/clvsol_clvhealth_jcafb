@@ -36,10 +36,3 @@ nosetests.xml
 .pydevproject
 
 project/odoo_client
-data/data
-data/odoo_api
-data_export_files
-lab_test_files
-report_files
-summary_files
-survey_files
