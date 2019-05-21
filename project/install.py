@@ -414,6 +414,7 @@ if __name__ == '__main__':
 
     clvhealth_jcafb = CLVhealthJCAFB(
         # super_user_pw=cli.super_user_pw,
+        dbname=cli.dbname,
         admin_user_pw=cli.admin_user_pw,
         demo_user_pw='demo',
         data_admin_user_pw=cli.data_admin_user_pw,
