@@ -167,21 +167,21 @@ class CLVhealthJCAFB(object):
 
         # ############################################################################################
         #
+        # OCA/l10n-brazil
+        #
+        # ############################################################################################
+
+        self.install_upgrade_module('l10n_br_base', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('l10n_br_zip', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('l10n_br_zip_correios', self.upgrade_all, group_names)
+
+        # ############################################################################################
+        #
         # OCA/server-tools
         #
         # ############################################################################################
-
-        # ############################################################################################
-        #
-        # CLVsol Odoo l10n_brazil
-        #
-        # ############################################################################################
-
-        self.install_upgrade_module('clv_l10n_br_base', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_l10n_br_zip', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_l10n_br_zip_correios', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
