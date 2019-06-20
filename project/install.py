@@ -242,9 +242,9 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_document_export', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_mfile', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_mfile', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_mfile_history', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_mfile_history', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_lab_test', self.upgrade_all, group_names)
 
@@ -334,7 +334,7 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_document_export_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_mfile_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_mfile_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_lab_test_jcafb', self.upgrade_all, group_names)
 
@@ -392,7 +392,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_mfile_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_mfile_sync_jcafb', self.upgrade_all, group_names)
 
 
 if __name__ == '__main__':
