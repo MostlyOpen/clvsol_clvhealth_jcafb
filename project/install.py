@@ -218,6 +218,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_global_tag', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_set', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_phase', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
@@ -227,8 +229,6 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_survey', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_survey_history', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_set', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_event', self.upgrade_all, group_names)
 
@@ -320,11 +320,11 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_global_tag_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_set_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_phase_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_employee_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_set_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_event_jcafb', self.upgrade_all, group_names)
 
