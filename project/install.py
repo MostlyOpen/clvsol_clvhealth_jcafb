@@ -200,7 +200,7 @@ class CLVhealthJCAFB(object):
         # ]
         self.install_upgrade_module('clv_base', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_off', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_aux', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_file_system', self.upgrade_all, group_names)
 
@@ -258,13 +258,13 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_address_history', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_address_off', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_aux', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_family', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_family_history', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_family_off', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_family_aux', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person', self.upgrade_all, group_names)
 
@@ -272,7 +272,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_export', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_person_off', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_aux', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -284,15 +284,15 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_address_l10n_br', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_address_off_l10n_br', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_aux_l10n_br', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_family_l10n_br', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_family_off_l10n_br', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_family_aux_l10n_br', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person_l10n_br', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_person_off_l10n_br', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_aux_l10n_br', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -302,7 +302,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_base_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_off_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_aux_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_file_system_jcafb', self.upgrade_all, group_names)
 
@@ -346,13 +346,13 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_address_history_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_address_off_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_aux_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_family_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_family_history_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_family_off_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_family_aux_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
 
@@ -364,7 +364,7 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_person_sel_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_person_off_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_aux_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
