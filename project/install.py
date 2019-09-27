@@ -348,6 +348,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_address_history_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_address_verification_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_address_aux_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_address_aux_verification_jcafb', self.upgrade_all, group_names)
