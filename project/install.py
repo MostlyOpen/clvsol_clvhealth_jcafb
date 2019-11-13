@@ -384,6 +384,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_verification_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_person_summary_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_person_sel_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person_aux_jcafb', self.upgrade_all, group_names)
