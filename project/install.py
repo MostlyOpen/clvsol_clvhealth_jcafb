@@ -372,6 +372,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_family_verification_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_family_summary_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_family_aux_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_family_aux_verification_jcafb', self.upgrade_all, group_names)
