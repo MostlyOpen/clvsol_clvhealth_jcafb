@@ -340,6 +340,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_employee_summary_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_survey_jcafb_2020', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_event_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_community_jcafb', self.upgrade_all, group_names)
