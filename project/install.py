@@ -396,31 +396,35 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_base_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_base_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_global_tag_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_global_tag_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_phase_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_phase_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_employee_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_employee_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_employee_history_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_employee_history_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address_history_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_history_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_family_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_history_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_family_history_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_survey_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_event_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_history_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_survey_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_event_sync_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_mfile_sync_jcafb', self.upgrade_all, group_names)
 
