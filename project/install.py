@@ -274,6 +274,12 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_processing', self.upgrade_all, group_names)
 
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Sync
+        #
+        # ############################################################################################
+
         self.install_upgrade_module('clv_external_sync', self.upgrade_all, group_names)
 
         # ############################################################################################
@@ -388,13 +394,13 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_processing_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_external_sync_jcafb', self.upgrade_all, group_names)
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Sync - JCAFB customizations
+        #
+        # ############################################################################################
 
-        # ############################################################################################
-        #
-        # CLVsol Odoo Addons - JCAFB customizations (External Sync)
-        #
-        # ############################################################################################
+        self.install_upgrade_module('clv_external_sync_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_base_sync_jcafb', self.upgrade_all, group_names)
 
