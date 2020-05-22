@@ -258,8 +258,6 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_aux_history', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
-
         self.install_upgrade_module('clv_summary', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_report', self.upgrade_all, group_names)
@@ -342,18 +340,6 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_history_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_address_verification_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_address_aux_verification_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_family_verification_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_person_verification_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_person_aux_verification_jcafb', self.upgrade_all, group_names)
-
         self.install_upgrade_module('clv_summary_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_employee_summary_jcafb', self.upgrade_all, group_names)
@@ -369,6 +355,32 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_report_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_processing_jcafb', self.upgrade_all, group_names)
+
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Verification
+        #
+        # ############################################################################################
+
+        self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
+
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Verification - JCAFB customizations
+        #
+        # ############################################################################################
+
+        self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_address_verification_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_address_aux_verification_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_family_verification_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_person_verification_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_person_aux_verification_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
