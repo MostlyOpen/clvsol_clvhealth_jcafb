@@ -234,8 +234,6 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_aux', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_report', self.upgrade_all, group_names)
-
         self.install_upgrade_module('clv_processing', self.upgrade_all, group_names)
 
         # ############################################################################################
@@ -303,8 +301,6 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_person_sel_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person_aux_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_report_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_processing_jcafb', self.upgrade_all, group_names)
 
@@ -433,6 +429,22 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_lab_test_export_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person_export_jcafb', self.upgrade_all, group_names)
+
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Report
+        #
+        # ############################################################################################
+
+        self.install_upgrade_module('clv_report', self.upgrade_all, group_names)
+
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Report - JCAFB customizations
+        #
+        # ############################################################################################
+
+        self.install_upgrade_module('clv_report_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
