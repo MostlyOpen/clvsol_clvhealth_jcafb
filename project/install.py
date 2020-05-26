@@ -218,8 +218,6 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_document', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_mfile', self.upgrade_all, group_names)
-
         self.install_upgrade_module('clv_lab_test', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_partner_entity', self.upgrade_all, group_names)
@@ -272,19 +270,13 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_employee_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_survey_jcafb_2020', self.upgrade_all, group_names)
-
         self.install_upgrade_module('clv_event_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_community_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_mfile_jcafb', self.upgrade_all, group_names)
-
         self.install_upgrade_module('clv_lab_test_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_lab_test_jcafb_2020', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_partner_entity_jcafb', self.upgrade_all, group_names)
 
@@ -295,8 +287,6 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_family_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_person_sel_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person_aux_jcafb', self.upgrade_all, group_names)
 
@@ -315,8 +305,6 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_event_history', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_document_history', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_mfile_history', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_lab_test_history', self.upgrade_all, group_names)
 
@@ -345,6 +333,20 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_family_history_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person_history_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_person_aux_history_jcafb', self.upgrade_all, group_names)
+
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - JCAFB 2020 customizations
+        #
+        # ############################################################################################
+
+        self.install_upgrade_module('clv_person_sel_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_survey_jcafb_2020', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_lab_test_jcafb_2020', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -509,8 +511,6 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_verification_sync_jcafb', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_mfile_sync_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_set_sync_jcafb', self.upgrade_all, group_names)
 
