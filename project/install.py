@@ -524,11 +524,11 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_event_sync_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_survey_sync_jcafb', self.upgrade_all, group_names)
-
         self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_survey_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_verification_sync_jcafb', self.upgrade_all, group_names)
 
