@@ -374,7 +374,7 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -382,17 +382,17 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address_verification_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_verification_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address_aux_verification_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_aux_verification_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_family_verification_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_family_verification_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_verification_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_verification_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_aux_verification_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_aux_verification_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -400,7 +400,7 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_summary', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_summary', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -408,17 +408,17 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_summary_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_summary_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_employee_summary_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_employee_summary_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address_summary_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_summary_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_family_summary_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_family_summary_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_summary_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_summary_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_aux_summary_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_aux_summary_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -426,13 +426,13 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_export', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_export', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_document_export', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_document_export', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test_export', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test_export', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_export', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_export', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -440,13 +440,13 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_export_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_export_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_document_export_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_document_export_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test_export_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test_export_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_export_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_export_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -454,7 +454,7 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_report', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_report', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -462,7 +462,7 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_report_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_report_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -470,7 +470,7 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_processing', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_processing', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -478,7 +478,7 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_processing_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_processing_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -530,11 +530,11 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_survey_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_verification_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_verification_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_set_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_set_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_export_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_export_sync_jcafb', self.upgrade_all, group_names)
 
 
 if __name__ == '__main__':
