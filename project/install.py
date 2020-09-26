@@ -194,7 +194,7 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_file_system', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_global_log', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_global_log', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_global_tag', self.upgrade_all, group_names)
 
@@ -235,8 +235,6 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_base_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_file_system_jcafb', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_global_log_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_global_tag_jcafb', self.upgrade_all, group_names)
 
