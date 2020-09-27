@@ -200,7 +200,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_set', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_survey', self.upgrade_all, group_names)
 
@@ -234,7 +234,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_base_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_employee_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_employee_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_event_jcafb', self.upgrade_all, group_names)
 
