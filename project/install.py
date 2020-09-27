@@ -157,17 +157,17 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('mail', False, group_names)
+        self.install_upgrade_module('mail', False, group_names)
 
-        # self.install_upgrade_module('contacts', False, group_names)
+        self.install_upgrade_module('contacts', False, group_names)
 
-        # self.install_upgrade_module('base_address_city', False, group_names)
+        self.install_upgrade_module('base_address_city', False, group_names)
 
-        # self.install_upgrade_module('base_address_extended', False, group_names)
+        self.install_upgrade_module('base_address_extended', False, group_names)
 
-        # self.install_upgrade_module('hr', False, group_names)
+        self.install_upgrade_module('hr', False, group_names)
 
-        # self.install_upgrade_module('survey', False, group_names)
+        self.install_upgrade_module('survey', False, group_names)
 
         # ############################################################################################
         #
