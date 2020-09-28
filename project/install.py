@@ -84,16 +84,6 @@ class CLVhealthJCAFB(object):
         else:
             new_module = db.module_install_upgrade(module, upgrade)
 
-        # if new_module and group_name_list != []:
-
-        #     user_name = 'Administrator'
-        #     print('\n%s%s (%s) %s' % ('--> ', module, user_name, group_name_list))
-        #     db.user_groups_setup(user_name, group_name_list)
-
-        #     user_name = 'Data Administrator'
-        #     print('\n%s%s (%s) %s' % ('--> ', module, user_name, group_name_list))
-        #     db.user_groups_setup(user_name, group_name_list)
-
         return new_module
 
     def install(self):
@@ -302,16 +292,6 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_person_aux_history_jcafb', self.upgrade_all, group_names)
 
-        # # ############################################################################################
-        # #
-        # # OCA/l10n-brazil
-        # #
-        # # ############################################################################################
-
-        # # self.install_upgrade_module('l10n_br_base', self.upgrade_all, group_names)
-
-        # # self.install_upgrade_module('l10n_br_zip', self.upgrade_all, group_names)
-
         # ############################################################################################
         #
         # CLVsol l10n-brazil
@@ -322,13 +302,13 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_l10n_br_zip', self.upgrade_all, group_names)
 
-        # # ############################################################################################
-        # #
-        # # CLVsol Odoo Addons - Brazilian Localization
-        # #
-        # # ############################################################################################
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Brazilian Localization
+        #
+        # ############################################################################################
 
-        # self.install_upgrade_module('clv_partner_entity_l10n_br', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_partner_entity_l10n_br', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_address_l10n_br', self.upgrade_all, group_names)
 
