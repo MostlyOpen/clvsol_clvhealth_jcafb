@@ -194,13 +194,13 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_survey', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_event', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_event', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_community', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_community', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_document', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_document', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_partner_entity', self.upgrade_all, group_names)
 
