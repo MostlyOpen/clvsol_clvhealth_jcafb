@@ -196,11 +196,11 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_survey', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_event', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_event', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_community', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_community', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_document', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_document', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_lab_test', self.upgrade_all, group_names)
 
@@ -256,11 +256,7 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_employee_history', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_survey_history', self.upgrade_all, group_names)
-
         # self.install_upgrade_module('clv_event_history', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_document_history', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_lab_test_history', self.upgrade_all, group_names)
 
@@ -504,7 +500,7 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_event_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
 
