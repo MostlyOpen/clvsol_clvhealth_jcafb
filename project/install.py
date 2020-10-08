@@ -212,11 +212,9 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_aux', self.upgrade_all, group_names)
-
         self.install_upgrade_module('clv_address_aux', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_aux', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_aux', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -230,7 +228,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_event_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_community_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_community_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
 
@@ -246,7 +244,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_address_aux_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_aux_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_aux_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -261,8 +259,6 @@ class CLVhealthJCAFB(object):
         # self.install_upgrade_module('clv_family_history', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_person_history', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_person_aux_history', self.upgrade_all, group_names)
 
         # # ############################################################################################
         # #
@@ -494,7 +490,7 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_person_history_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_aux_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_aux_sync_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_event_sync_jcafb', self.upgrade_all, group_names)
 
