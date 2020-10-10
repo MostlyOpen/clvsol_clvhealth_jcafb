@@ -412,14 +412,6 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_person_aux_l10n_br', self.upgrade_all, group_names)
 
-        # # ############################################################################################
-        # #
-        # # CLVsol Odoo Addons - Brazilian Localization - JCAFB customizations
-        # #
-        # # ############################################################################################
-
-        # self.install_upgrade_module('clv_base_l10n_br_jcafb', self.upgrade_all, group_names)
-
         # ############################################################################################
         #
         # CLVsol Odoo Addons - Sync
@@ -474,9 +466,9 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_verification_sync_jcafb', self.upgrade_all, group_names)
-
         self.install_upgrade_module('clv_set_sync_jcafb', self.upgrade_all, group_names)
+
+        # self.install_upgrade_module('clv_verification_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_export_sync_jcafb', self.upgrade_all, group_names)
 
