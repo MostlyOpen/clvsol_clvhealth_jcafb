@@ -402,16 +402,6 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_partner_entity_l10n_br', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address_l10n_br', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_address_aux_l10n_br', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_family_l10n_br', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_person_l10n_br', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_person_aux_l10n_br', self.upgrade_all, group_names)
-
         # ############################################################################################
         #
         # CLVsol Odoo Addons - Sync
