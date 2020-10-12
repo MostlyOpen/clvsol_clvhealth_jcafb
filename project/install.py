@@ -272,21 +272,21 @@ class CLVhealthJCAFB(object):
 
         # # self.install_upgrade_module('clv_lab_test_jcafb_2020', self.upgrade_all, group_names)
 
-        # # ############################################################################################
-        # #
-        # # CLVsol Odoo Addons - Verification
-        # #
-        # # ############################################################################################
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Verification
+        #
+        # ############################################################################################
 
-        # self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
 
-        # # ############################################################################################
-        # #
-        # # CLVsol Odoo Addons - Verification - JCAFB customizations
-        # #
-        # # ############################################################################################
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Verification - JCAFB customizations
+        #
+        # ############################################################################################
 
-        # self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_address_verification_jcafb', self.upgrade_all, group_names)
 
@@ -458,7 +458,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_set_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_verification_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_verification_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_export_sync_jcafb', self.upgrade_all, group_names)
 
