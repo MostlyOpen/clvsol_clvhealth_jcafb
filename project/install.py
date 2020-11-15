@@ -242,8 +242,6 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_lab_test_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_partner_entity_jcafb', self.upgrade_all, group_names)
-
         self.install_upgrade_module('clv_address_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_family_jcafb', self.upgrade_all, group_names)
@@ -281,6 +279,8 @@ class CLVhealthJCAFB(object):
         # ############################################################################################
 
         self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_partner_entity_verification_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_address_verification_jcafb', self.upgrade_all, group_names)
 
