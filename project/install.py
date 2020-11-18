@@ -362,13 +362,13 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_report_jcafb', self.upgrade_all, group_names)
 
-        # # ############################################################################################
-        # #
-        # # CLVsol Odoo Addons - Process
-        # #
-        # # ############################################################################################
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Process
+        #
+        # ############################################################################################
 
-        # self.install_upgrade_module('clv_processing', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_processing', self.upgrade_all, group_names)
 
         # # ############################################################################################
         # #
