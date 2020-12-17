@@ -292,31 +292,31 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_aux_verification_jcafb', self.upgrade_all, group_names)
 
-        # # ############################################################################################
-        # #
-        # # CLVsol Odoo Addons - Summary
-        # #
-        # # ############################################################################################
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Summary
+        #
+        # ############################################################################################
 
-        # self.install_upgrade_module('clv_summary', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_summary', self.upgrade_all, group_names)
 
-        # # ############################################################################################
-        # #
-        # # CLVsol Odoo Addons - Summary - JCAFB customizations
-        # #
-        # # ############################################################################################
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Summary - JCAFB customizations
+        #
+        # ############################################################################################
 
-        # self.install_upgrade_module('clv_summary_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_summary_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_employee_summary_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_employee_summary_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address_summary_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_summary_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_family_summary_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_family_summary_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_summary_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_summary_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_aux_summary_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_aux_summary_jcafb', self.upgrade_all, group_names)
 
         # # ############################################################################################
         # #
