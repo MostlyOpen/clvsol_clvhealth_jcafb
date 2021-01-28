@@ -432,7 +432,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_address_history_sync_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_address_aux_sync_jcafb', self.upgrade_all, group_names)
+        # self.install_upgrade_module('clv_address_aux_sync_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_family_sync_jcafb', self.upgrade_all, group_names)
 
@@ -444,7 +444,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_history_sync_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_person_aux_sync_jcafb', self.upgrade_all, group_names)
+        # self.install_upgrade_module('clv_person_aux_sync_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_event_sync_jcafb', self.upgrade_all, group_names)
 
