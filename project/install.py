@@ -228,6 +228,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_aux', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_patient_aux', self.upgrade_all, group_names)
+
         # ############################################################################################
         #
         # CLVsol Odoo Addons - JCAFB customizations
