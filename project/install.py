@@ -252,11 +252,11 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_patient_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_address_aux_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person_aux_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_patient_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_patient_aux_jcafb', self.upgrade_all, group_names)
 
