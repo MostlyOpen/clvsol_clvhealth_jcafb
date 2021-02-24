@@ -222,9 +222,15 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_relation', self.upgrade_all, group_names)
 
+        # self.install_upgrade_module('clv_patient', self.upgrade_all, group_names)
+
+        # self.install_upgrade_module('clv_patient_community', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_address_aux', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person_aux', self.upgrade_all, group_names)
+
+        # self.install_upgrade_module('clv_patient_aux', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -248,9 +254,13 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
 
+        # self.install_upgrade_module('clv_patient_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_address_aux_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person_aux_jcafb', self.upgrade_all, group_names)
+
+        # self.install_upgrade_module('clv_patient_aux_jcafb', self.upgrade_all, group_names)
 
         # # ############################################################################################
         # #
@@ -291,6 +301,12 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_person_verification_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_person_aux_verification_jcafb', self.upgrade_all, group_names)
+
+        # self.install_upgrade_module('clv_patient_verification_jcafb', self.upgrade_all, group_names)
+
+        # self.install_upgrade_module('clv_patient_aux_verification_jcafb', self.upgrade_all, group_names)
+
+        # self.install_upgrade_module('clv_patient_community_verification_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
