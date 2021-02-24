@@ -304,6 +304,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_patient_verification_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_patient_aux_verification_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_patient_community_verification_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
