@@ -344,7 +344,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_document_export', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test_export', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test_export', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_person_export', self.upgrade_all, group_names)
 
