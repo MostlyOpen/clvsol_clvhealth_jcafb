@@ -360,7 +360,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_lab_test_export_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_export_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_export_jcafb', self.upgrade_all, group_names)
 
         # # ############################################################################################
         # #
