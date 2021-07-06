@@ -228,6 +228,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_patient', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_patient_history', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_patient_community', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_address_aux', self.upgrade_all, group_names)
