@@ -224,6 +224,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_residence', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_residence_history', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_residence_community', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_patient', self.upgrade_all, group_names)
