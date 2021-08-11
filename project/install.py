@@ -228,11 +228,15 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_residence_community', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_residence_history_community', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_patient', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_patient_history', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_patient_community', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_patient_history_community', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_address_aux', self.upgrade_all, group_names)
 
@@ -263,6 +267,10 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_person_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_residence_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_residence_community_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_patient_community_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_patient_jcafb', self.upgrade_all, group_names)
 
