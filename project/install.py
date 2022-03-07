@@ -452,6 +452,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_external_sync', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_external_sync_log', self.upgrade_all, group_names)
+
         # ############################################################################################
         #
         # CLVsol Odoo Addons - Sync - JCAFB customizations
