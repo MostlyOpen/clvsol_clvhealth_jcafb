@@ -246,7 +246,7 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_base_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_base_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_employee_jcafb', self.upgrade_all, group_names)
 
