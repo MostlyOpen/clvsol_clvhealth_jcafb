@@ -182,8 +182,6 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_global_tag', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_global_tag_log', self.upgrade_all, group_names)
-
         # self.install_upgrade_module('clv_set', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_survey', self.upgrade_all, group_names)
@@ -247,6 +245,8 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_global_log', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_phase_log', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_global_tag_log', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
