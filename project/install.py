@@ -186,9 +186,9 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_survey', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_employee_history', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_employee_history', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_event', self.upgrade_all, group_names)
 
@@ -250,6 +250,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_set_log', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_employee_log', self.upgrade_all, group_names)
+
         # ############################################################################################
         #
         # CLVsol Odoo Addons - JCAFB customizations
@@ -258,7 +260,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_base_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_employee_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_employee_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_event_jcafb', self.upgrade_all, group_names)
 
@@ -482,9 +484,9 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_survey_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_employee_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_employee_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_employee_history_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_employee_history_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_partner_entity_sync_jcafb', self.upgrade_all, group_names)
 
@@ -516,7 +518,7 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_set_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_set_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_verification_sync_jcafb', self.upgrade_all, group_names)
 
