@@ -194,9 +194,9 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_community', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_document', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_document', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_partner_entity', self.upgrade_all, group_names)
 
@@ -252,6 +252,10 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_employee_log', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_document_log', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_lab_test_log', self.upgrade_all, group_names)
+
         # ############################################################################################
         #
         # CLVsol Odoo Addons - JCAFB customizations
@@ -264,9 +268,9 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_event_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_address_jcafb', self.upgrade_all, group_names)
 
@@ -514,9 +518,9 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_event_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_set_sync_jcafb', self.upgrade_all, group_names)
 
