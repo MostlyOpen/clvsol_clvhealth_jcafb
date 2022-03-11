@@ -174,17 +174,17 @@ class CLVhealthJCAFB(object):
         #     'Manager (Base)',
         #     'Super Manager (Base)',
         # ]
-        # self.install_upgrade_module('clv_base', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_base', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_phase', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_survey', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_file_system', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_phase', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_global_tag', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_set', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_survey', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
 
@@ -242,9 +242,9 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_global_log', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_global_log', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_phase_log', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_phase_log', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_global_tag_log', self.upgrade_all, group_names)
 
@@ -478,9 +478,9 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_external_sync', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_external_sync', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_external_sync_log', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_external_sync_log', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -488,17 +488,17 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_external_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_external_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_base_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_base_sync_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_phase_sync_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_survey_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_file_system_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_phase_sync_jcafb', self.upgrade_all, group_names)
-
         # self.install_upgrade_module('clv_global_tag_sync_jcafb', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_survey_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_employee_sync_jcafb', self.upgrade_all, group_names)
 
