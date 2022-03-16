@@ -196,7 +196,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_document', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_partner_entity', self.upgrade_all, group_names)
 
@@ -256,7 +256,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_document_log', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test_log', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test_log', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_partner_entity_log', self.upgrade_all, group_names)
 
@@ -510,6 +510,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
+
         # self.install_upgrade_module('clv_partner_entity_sync_jcafb', self.upgrade_all, group_names)
 
         # # self.install_upgrade_module('clv_address_sync_jcafb', self.upgrade_all, group_names)
@@ -537,8 +539,6 @@ class CLVhealthJCAFB(object):
         # self.install_upgrade_module('clv_patient_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_patient_history_sync_jcafb', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
 
         # # self.install_upgrade_module('clv_verification_sync_jcafb', self.upgrade_all, group_names)
 
