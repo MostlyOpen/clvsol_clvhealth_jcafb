@@ -161,16 +161,6 @@ class CLVhealthJCAFB(object):
 
         # ############################################################################################
         #
-        # CLVsol l10n-brazil
-        #
-        # ############################################################################################
-
-        self.install_upgrade_module('clv_l10n_br_base', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_l10n_br_zip', self.upgrade_all, group_names)
-
-        # ############################################################################################
-        #
         # CLVsol Odoo Addons
         #
         # ############################################################################################
@@ -248,47 +238,27 @@ class CLVhealthJCAFB(object):
 
         # ############################################################################################
         #
-        # CLVsol Odoo Addons - Brazilian Localization
-        #
-        # ############################################################################################
-
-        self.install_upgrade_module('clv_partner_entity_l10n_br', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_residence_l10n_br', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_patient_l10n_br', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_patient_aux_l10n_br', self.upgrade_all, group_names)
-
-        # ############################################################################################
-        #
         # CLVsol Odoo Addons - Log
         #
         # ############################################################################################
 
         self.install_upgrade_module('clv_global_log', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_phase_log', self.upgrade_all, group_names)
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Verification
+        #
+        # ############################################################################################
 
-        self.install_upgrade_module('clv_global_tag_log', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_set_log', self.upgrade_all, group_names)
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Sync
+        #
+        # ############################################################################################
 
-        self.install_upgrade_module('clv_employee_log', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_event_log', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_document_log', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_lab_test_log', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_partner_entity_log', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_residence_log', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_patient_log', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_patient_aux_log', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_external_sync', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -340,11 +310,35 @@ class CLVhealthJCAFB(object):
 
         # ############################################################################################
         #
-        # CLVsol Odoo Addons - Verification
+        # CLVsol Odoo Addons - Log - JCAFB customizations
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_verification', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_phase_log_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_global_tag_log_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_set_log_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_employee_log_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_event_log_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_document_log_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_lab_test_log_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_partner_entity_log_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_residence_log_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_patient_log_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_patient_aux_log_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_verification_log_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_external_sync_log_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -352,13 +346,17 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_verification_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_partner_entity_verification_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_partner_entity_verification_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_residence_verification_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_residence_verification_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_patient_verification_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_patient_verification_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_patient_aux_verification_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_lab_test_verification_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_address_verification_jcafb', self.upgrade_all, group_names)
 
@@ -372,11 +370,7 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_residence_community_verification_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_patient_aux_verification_jcafb', self.upgrade_all, group_names)
-
         # self.install_upgrade_module('clv_patient_community_verification_jcafb', self.upgrade_all, group_names)
-
-        # self.install_upgrade_module('clv_lab_test_verification_jcafb', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -478,13 +472,27 @@ class CLVhealthJCAFB(object):
 
         # ############################################################################################
         #
-        # CLVsol Odoo Addons - Sync
+        # CLVsol l10n-brazil
         #
         # ############################################################################################
 
-        self.install_upgrade_module('clv_external_sync', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_l10n_br_base', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_external_sync_log', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_l10n_br_zip', self.upgrade_all, group_names)
+
+        # ############################################################################################
+        #
+        # CLVsol Odoo Addons - Brazilian Localization
+        #
+        # ############################################################################################
+
+        self.install_upgrade_module('clv_partner_entity_l10n_br', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_residence_l10n_br', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_patient_l10n_br', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_patient_aux_l10n_br', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
