@@ -330,6 +330,10 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_base_sync', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_phase_sync', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_survey_sync', self.upgrade_all, group_names)
+
         # ############################################################################################
         #
         # CLVsol Odoo Addons - JCAFB customizations
@@ -513,10 +517,6 @@ class CLVhealthJCAFB(object):
         # ############################################################################################
 
         self.install_upgrade_module('clv_external_sync_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_phase_sync_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_survey_sync_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_file_system_sync_jcafb', self.upgrade_all, group_names)
 
