@@ -336,6 +336,20 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_file_system_sync', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_global_tag_sync', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_set_sync', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_employee_sync', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_employee_history_sync', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_event_sync', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_document_sync', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_lab_test_sync', self.upgrade_all, group_names)
+
         # ############################################################################################
         #
         # CLVsol Odoo Addons - JCAFB customizations
@@ -507,20 +521,6 @@ class CLVhealthJCAFB(object):
         # ############################################################################################
 
         self.install_upgrade_module('clv_external_sync_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_global_tag_sync_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_set_sync_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_employee_sync_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_employee_history_sync_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_event_sync_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_partner_entity_sync_jcafb', self.upgrade_all, group_names)
 
