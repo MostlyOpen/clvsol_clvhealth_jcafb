@@ -350,6 +350,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_document_sync', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_document_survey_sync', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_lab_test_sync', self.upgrade_all, group_names)
 
         # ############################################################################################
