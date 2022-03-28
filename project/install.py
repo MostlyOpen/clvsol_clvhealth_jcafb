@@ -372,12 +372,6 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_global_tag_log_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_set_log_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_employee_log_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_event_log_jcafb', self.upgrade_all, group_names)
-
         self.install_upgrade_module('clv_document_log_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_lab_test_log_jcafb', self.upgrade_all, group_names)
