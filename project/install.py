@@ -532,6 +532,10 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_event_sync_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_document_log_sync_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_partner_entity_sync_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_residence_sync_jcafb', self.upgrade_all, group_names)
