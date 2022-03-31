@@ -149,8 +149,6 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('mail', False, group_names)
 
-        self.install_upgrade_module('survey', False, group_names)
-
         self.install_upgrade_module('hr', False, group_names)
 
         self.install_upgrade_module('contacts', False, group_names)
@@ -158,6 +156,8 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('base_address_city', False, group_names)
 
         self.install_upgrade_module('base_address_extended', False, group_names)
+
+        self.install_upgrade_module('survey', False, group_names)
 
         # ############################################################################################
         #
@@ -178,8 +178,6 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_phase', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_survey', self.upgrade_all, group_names)
-
         self.install_upgrade_module('clv_file_system', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_global_tag', self.upgrade_all, group_names)
@@ -191,6 +189,8 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_employee_history', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_survey', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_event', self.upgrade_all, group_names)
 
@@ -302,8 +302,6 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_phase_sync', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_survey_sync', self.upgrade_all, group_names)
-
         self.install_upgrade_module('clv_file_system_sync', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_global_tag_sync', self.upgrade_all, group_names)
@@ -313,6 +311,8 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_employee_sync', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_employee_history_sync', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_survey_sync', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_event_sync', self.upgrade_all, group_names)
 
