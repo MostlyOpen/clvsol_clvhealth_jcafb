@@ -288,7 +288,9 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_processing', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_processing', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_survey_process', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -398,7 +400,7 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_verification_log_jcafb', self.upgrade_all, group_names)
 
-        self.install_upgrade_module('clv_processing_log_jcafb', self.upgrade_all, group_names)
+        # self.install_upgrade_module('clv_processing_log_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_external_sync_log_jcafb', self.upgrade_all, group_names)
 
