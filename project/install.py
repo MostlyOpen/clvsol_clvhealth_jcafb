@@ -202,7 +202,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_lab_test_survey', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_partner_entity', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_partner_entity', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_residence', self.upgrade_all, group_names)
 
@@ -494,7 +494,7 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_l10n_br_base', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_l10n_br_base', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_l10n_br_zip', self.upgrade_all, group_names)
 
@@ -546,7 +546,7 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_lab_test_log_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_partner_entity_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_partner_entity_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_residence_sync_jcafb', self.upgrade_all, group_names)
 
