@@ -184,7 +184,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_set', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_pool', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_pool', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
 
@@ -336,11 +336,11 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_employee_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_event_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_event_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_residence_jcafb', self.upgrade_all, group_names)
 
@@ -536,13 +536,13 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_employee_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_event_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_event_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_document_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_document_log_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_lab_test_log_sync_jcafb', self.upgrade_all, group_names)
 
