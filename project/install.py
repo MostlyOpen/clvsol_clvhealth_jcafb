@@ -558,6 +558,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_lab_test_log_sync_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_lab_test_verification_sync_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_residence_sync_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_residence_log_sync_jcafb', self.upgrade_all, group_names)
