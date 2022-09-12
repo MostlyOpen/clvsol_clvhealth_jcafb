@@ -344,7 +344,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_patient_aux_log_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_community', self.upgrade_all, group_names)
+        # self.install_upgrade_module('clv_community_log', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_address_log_jcafb', self.upgrade_all, group_names)
 
