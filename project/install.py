@@ -214,9 +214,9 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_patient_aux', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_community', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_community', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_residence_community', self.upgrade_all, group_names)
 
@@ -266,7 +266,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_patient_aux_l10n_br', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address_l10n_br', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_l10n_br', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_family_l10n_br', self.upgrade_all, group_names)
 
@@ -300,7 +300,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_patient_aux_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_residence_community_jcafb', self.upgrade_all, group_names)
 
@@ -344,9 +344,9 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_patient_aux_log_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_community_log', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_community_log_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address_log_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_log_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_family_log_jcafb', self.upgrade_all, group_names)
 
@@ -420,7 +420,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_lab_test_verification_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address_verification_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_verification_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_residence_community_verification_jcafb', self.upgrade_all, group_names)
 
@@ -534,6 +534,8 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_patient_aux_sync', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_address_sync', self.upgrade_all, group_names)
+
         # ############################################################################################
         #
         # CLVsol Odoo Addons - Sync - JCAFB customizations
@@ -582,7 +584,11 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_patient_aux_verification_sync_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address_sync_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_sync_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_address_log_sync_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_address_verification_sync_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_address_history_sync_jcafb', self.upgrade_all, group_names)
 
