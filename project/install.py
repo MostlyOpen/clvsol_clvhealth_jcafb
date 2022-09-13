@@ -220,7 +220,7 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_residence_community', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_address_history', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_address_history', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_residence_history_community', self.upgrade_all, group_names)
 
@@ -535,6 +535,8 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_patient_aux_sync', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_address_sync', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_address_history_sync', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
