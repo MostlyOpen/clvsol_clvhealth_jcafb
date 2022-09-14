@@ -228,9 +228,9 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_family_history', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_relation', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_relation', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_patient_community', self.upgrade_all, group_names)
 
@@ -270,7 +270,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_family_l10n_br', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_person_l10n_br', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_person_l10n_br', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_address_aux_l10n_br', self.upgrade_all, group_names)
 
@@ -541,6 +541,10 @@ class CLVhealthJCAFB(object):
         self.install_upgrade_module('clv_family_sync', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_family_history_sync', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_person_sync', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_person_relation_sync', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
