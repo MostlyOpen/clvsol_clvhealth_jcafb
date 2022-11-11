@@ -202,17 +202,17 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_lab_test_survey', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_partner_entity', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_partner_entity', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_residence', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_residence', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_residence_history', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_patient', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_patient', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_patient_history', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_patient_aux', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_patient_aux', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_community', self.upgrade_all, group_names)
 
@@ -248,9 +248,9 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_l10n_br_base', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_l10n_br_base', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_l10n_br_zip', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_l10n_br_zip', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -258,13 +258,13 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_partner_entity_l10n_br', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_partner_entity_l10n_br', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_residence_l10n_br', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_residence_l10n_br', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_patient_l10n_br', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_patient_l10n_br', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_patient_aux_l10n_br', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_patient_aux_l10n_br', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_address_l10n_br', self.upgrade_all, group_names)
 
@@ -320,7 +320,7 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_global_log', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_global_log', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -336,13 +336,13 @@ class CLVhealthJCAFB(object):
 
         # self.install_upgrade_module('clv_lab_test_log_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_partner_entity_log_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_partner_entity_log_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_residence_log_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_residence_log_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_patient_log_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_patient_log_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_patient_aux_log_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_patient_aux_log_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_community_log_jcafb', self.upgrade_all, group_names)
 
