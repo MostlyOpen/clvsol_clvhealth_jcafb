@@ -184,7 +184,7 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_set', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_pool', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_pool', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_employee', self.upgrade_all, group_names)
 
@@ -290,13 +290,19 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_document_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_document_pool_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_lab_test_jcafb', self.upgrade_all, group_names)
+
+        self.install_upgrade_module('clv_lab_test_pool_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_residence_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_residence_pool_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_patient_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_patient_pool_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_patient_pool_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_patient_aux_jcafb', self.upgrade_all, group_names)
 
