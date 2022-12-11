@@ -446,7 +446,7 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_export', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_export', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_document_export', self.upgrade_all, group_names)
 
@@ -462,7 +462,7 @@ class CLVhealthJCAFB(object):
         #
         # ############################################################################################
 
-        # self.install_upgrade_module('clv_export_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_export_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_document_export_jcafb', self.upgrade_all, group_names)
 
