@@ -206,11 +206,11 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_residence', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_residence_history', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_residence_history', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_patient', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_patient_history', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_patient_history', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_patient_aux', self.upgrade_all, group_names)
 
@@ -448,13 +448,13 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_export', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_document_export', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_document_export', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test_export', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test_export', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_person_export', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_patient_export', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_patient_export', self.upgrade_all, group_names)
 
         # ############################################################################################
         #
@@ -464,13 +464,13 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_export_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_document_export_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_document_export_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_lab_test_export_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_lab_test_export_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_person_export_jcafb', self.upgrade_all, group_names)
 
-        # self.install_upgrade_module('clv_patient_export_jcafb', self.upgrade_all, group_names)
+        self.install_upgrade_module('clv_patient_export_jcafb', self.upgrade_all, group_names)
 
         # self.install_upgrade_module('clv_patient_community_export_jcafb', self.upgrade_all, group_names)
 
