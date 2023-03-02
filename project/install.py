@@ -426,13 +426,13 @@ class CLVhealthJCAFB(object):
 
         self.install_upgrade_module('clv_partner_entity_verification_jcafb', self.upgrade_all, group_names)
 
+        self.install_upgrade_module('clv_patient_rec_verification_jcafb', self.upgrade_all, group_names)
+
         self.install_upgrade_module('clv_residence_verification_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_patient_verification_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_patient_aux_verification_jcafb', self.upgrade_all, group_names)
-
-        self.install_upgrade_module('clv_patient_rec_verification_jcafb', self.upgrade_all, group_names)
 
         self.install_upgrade_module('clv_lab_test_verification_jcafb', self.upgrade_all, group_names)
 
